@@ -1,9 +1,8 @@
-from django.test import TestCase, SimpleTestCase
-from django.urls import reverse, resolve
-from blog.views import PostDetailView
+from django.test import TestCase
+
+
 from ..models import Categories
 from ..forms import PostForm
-from accounts.models import User
 
 
 # Create your tests here.

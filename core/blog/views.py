@@ -12,9 +12,6 @@ from django.views.generic.list import ListView
 from .forms import PostForm
 from django.views.generic.edit import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.exceptions import ValidationError
-from accounts.models import Profile
-from blog.models import Post
 
 
 # Create your views here.
