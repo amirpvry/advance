@@ -1,4 +1,3 @@
-from rest_framework import viewsets, generics
 from rest_framework.response import Response
 from .serialaizers import (
     RecursionSerializer,
@@ -7,25 +6,19 @@ from .serialaizers import (
     ProfileSerializer,
     ResentEmailSerializer,
 )
-from rest_framework import status
 from rest_framework.authtoken.views import ObtainAuthToken, APIView
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
-from django.contrib.auth.models import User
 from accounts.models import Profile
 from django.shortcuts import get_object_or_404
-from django.contrib.auth import logout
 from django.core.mail import send_mail
-from mail_templated import send_mail
-from mail_templated import EmailMessage
-from ..utils import Thread
+
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.core.mail import send_mail
+
 from django.conf import settings
 from rest_framework import generics, status
 from django.template.loader import render_to_string
 import jwt
-from django.conf import settings
 from django.contrib.auth import get_user_model
 
 
