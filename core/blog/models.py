@@ -15,10 +15,7 @@ class Post(models.Model):
     title = models.CharField(max_length=256)
 
     content = models.TextField()
-    categories = models.ForeignKey(
-        "Categories", on_delete=models.SET_NULL, null=True
-    )
-    
+    categories = models.ForeignKey("Categories", on_delete=models.SET_NULL, null=True)
 
     status = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True)

@@ -80,9 +80,7 @@ class CustomAuthToken(ObtainAuthToken):
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data["user"]
         token, created = Token.objects.get_or_create(user=user)
-        return Response(
-            {"token": token.key, "user_id": user.pk, "email": user.email}
-        )
+        return Response({"token": token.key, "user_id": user.pk, "email": user.email})
 
 
 class CustomDiscardToken(APIView):
@@ -93,9 +91,7 @@ class CustomDiscardToken(APIView):
             request.user.auth_token.delete()
             return Response(status=status.HTTP_200_OK)
         except Exception as e:
-            return Response(
-                str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class ChangePasswordApiView(generics.GenericAPIView):
@@ -117,9 +113,7 @@ class ChangePasswordApiView(generics.GenericAPIView):
 
         if serializer.is_valid():
             # Check old password
-            if not self.object.check_password(
-                serializer.data.get("old_password")
-            ):
+            if not self.object.check_password(serializer.data.get("old_password")):
                 return Response(
                     {"old_password": ["Wrong password."]},
                     status=status.HTTP_400_BAD_REQUEST,
@@ -154,9 +148,7 @@ class ProfileApiView(generics.RetrieveUpdateAPIView):
 class SendEmailApiView(generics.GenericAPIView):
 
     def get(self, request, *args, **kwargs):
-        user = (
-            request.user
-        )  # فرض بر اینکه کاربر از طریق احراز هویت درخواست می‌دهد
+        user = request.user  # فرض بر اینکه کاربر از طریق احراز هویت درخواست می‌دهد
 
         if not user.email:
             return Response(
@@ -294,9 +286,7 @@ class ResentEmailApiView(generics.GenericAPIView):
         # گرفتن داده‌های query parameters و اعتبارسنجی آنها
         serializer = self.get_serializer(data=request.query_params)
         serializer.is_valid(raise_exception=True)
-        email = serializer.validated_data[
-            "email"
-        ]  # استخراج ایمیل پس از اعتبارسنجی
+        email = serializer.validated_data["email"]  # استخراج ایمیل پس از اعتبارسنجی
 
         try:
             # جستجو برای کاربر با ایمیل مشخص شده

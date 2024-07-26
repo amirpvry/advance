@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="post",
             name="id",
-            field=models.CharField(
-                max_length=255, primary_key=True, serialize=False
-            ),
+            field=models.CharField(max_length=255, primary_key=True, serialize=False),
         ),
     ]

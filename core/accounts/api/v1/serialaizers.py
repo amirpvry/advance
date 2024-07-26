@@ -17,9 +17,7 @@ class RecursionSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         if attrs.get("password") != attrs.get("password2"):
-            raise serializers.ValidationError(
-                {"detail": "Passwords do not match."}
-            )
+            raise serializers.ValidationError({"detail": "Passwords do not match."})
 
         try:
             # validate the password and catch the exception
@@ -65,9 +63,7 @@ class CustomAuthTokenSerializer(serializers.Serializer):
                 msg = _("Unable to log in with provided credentials.")
                 raise serializers.ValidationError(msg, code="authorization")
             if not user.is_verified:
-                raise serializers.ValidationError(
-                    {"detail": "User is not verified."}
-                )
+                raise serializers.ValidationError({"detail": "User is not verified."})
 
         else:
             msg = _('Must include "username" and "password".')
@@ -89,9 +85,7 @@ class ChangePasswordSerializer(serializers.Serializer):
 
     def validate(self, attrs):
         if attrs.get("new_password") != attrs.get("new_password2"):
-            raise serializers.ValidationError(
-                {"detail": "Passwords do not match."}
-            )
+            raise serializers.ValidationError({"detail": "Passwords do not match."})
 
         try:
             # validate the password and catch the exception
@@ -99,9 +93,7 @@ class ChangePasswordSerializer(serializers.Serializer):
 
         # the exception raised here is different than serializers.ValidationError
         except exceptions.ValidationError as e:
-            raise serializers.ValidationError(
-                {"new_password": list(e.messages)}
-            )
+            raise serializers.ValidationError({"new_password": list(e.messages)})
 
         return super().validate(attrs)
 
