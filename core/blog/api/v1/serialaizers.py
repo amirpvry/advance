@@ -39,7 +39,7 @@ class PostSerializer(serializers.ModelSerializer):
         request = self.context.get("request")
         rep = super().to_representation(instance)
         if request.parser_context.get("kwargs").get("pk"):
-           
+
             rep.pop("absolute_api_url")
 
         else:
