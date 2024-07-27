@@ -15,4 +15,4 @@ djoser
 pytest
 pytest-django
 faker
-
+django-cors-headers

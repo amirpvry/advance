@@ -11,7 +11,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
 
-    related_url = serializers.URLField(source="get_absolute_api_url", read_only=True)
+    related_url = serializers.URLField(source="get_abs_api_url", read_only=True)
     absolute_api_url = serializers.SerializerMethodField(method_name="get_abs_api_url")
 
     class Meta:
@@ -39,7 +39,7 @@ class PostSerializer(serializers.ModelSerializer):
         request = self.context.get("request")
         rep = super().to_representation(instance)
         if request.parser_context.get("kwargs").get("pk"):
-            rep.pop("related_url")
+           
             rep.pop("absolute_api_url")
 
         else:
