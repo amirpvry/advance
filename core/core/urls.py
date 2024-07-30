@@ -22,6 +22,11 @@ from django.conf.urls.static import static
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.http import HttpResponse
+
+
+def testfinal(request):
+    return HttpResponse('<h1> sadasd </h1>')
 
 
 schema_view = get_schema_view(
@@ -60,6 +65,9 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
+    path(
+        "",testfinal, name= 'finaltest'
+    )
 ]
 
 if settings.DEBUG:
