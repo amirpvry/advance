@@ -32,5 +32,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         host: ${{ secrets.HOST }}
         port: ${{ secrets.PORT }}
-        script: ls
+        script: |
+        cd ${{ secrets.PROJECT}}
+        docker-compose -f docker-compose-stage.yml stop
+        docker-compose -f docker-compose-stage.yml restart
+
 
