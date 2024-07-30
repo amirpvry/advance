@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     "djoser",
     "drf_yasg",
     "mail_templated",
-    'django_celery_beat',
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
@@ -168,13 +168,13 @@ EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
 EMAIL_PORT = 25
 
-CELERY_BROKER_URL = 'redis://redis:6379/1'
+CELERY_BROKER_URL = "redis://redis:6379/1"
 
 # CELERY_BEAT_SCHEDULE = {
 #     'send_email': {
 #         'task': 'accounts.tasks.SendEmail',
 #         'schedule': 30.0,
-        
+
 #     }}
 
 CACHES = {
@@ -183,6 +183,6 @@ CACHES = {
         "LOCATION": "redis://redis:6379/2",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
+        },
     }
 }
