@@ -1,8 +1,6 @@
 from .serialaizers import PostSerializer, CategorySerializer
 from blog.models import Post, Categories
-from rest_framework.permissions import (
-    IsAuthenticatedOrReadOnly,
-)
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework import viewsets
 from .permissions import IsOwnerOrReadOnly
 from django_filters.rest_framework import DjangoFilterBackend
@@ -45,7 +43,7 @@ def postDetail(request , id):
 
 
 class PostViewSetModel(viewsets.ModelViewSet):
-    permission_classes = [IsOwnerOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly, IsOwnerOrReadOnly]
     serializer_class = PostSerializer
     queryset = Post.objects.filter(status=True)
     filter_backends = [

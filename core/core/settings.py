@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "djoser",
     "drf_yasg",
     "mail_templated",
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
@@ -137,7 +138,7 @@ STATIC_ROOT = BASE_DIR / "static"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 STATICFILES_DIRS = [
-    # BASE_DIR / "staticfiles",
+    BASE_DIR / "staticfiles",
 ]
 
 # Default primary key field type
@@ -166,3 +167,22 @@ EMAIL_HOST = "smtp4dev"
 EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
 EMAIL_PORT = 25
+
+CELERY_BROKER_URL = "redis://redis:6379/1"
+
+# CELERY_BEAT_SCHEDULE = {
+#     'send_email': {
+#         'task': 'accounts.tasks.SendEmail',
+#         'schedule': 30.0,
+
+#     }}
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://redis:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    }
+}
