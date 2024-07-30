@@ -19,7 +19,9 @@ jobs:
       run: docker exec backend sh -c "flake8 && pytest ."
   
   Deploy:
+    if: ${{ always() && contains(json(needs.*.result, ','), 'success')}}
     name: deploy
+    needs: Test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
