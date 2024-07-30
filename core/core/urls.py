@@ -26,7 +26,7 @@ from django.http import HttpResponse
 
 
 def testfinal(request):
-    return HttpResponse('<h1> sadasd </h1>')
+    return HttpResponse("<h1> sadasd </h1>")
 
 
 schema_view = get_schema_view(
@@ -65,9 +65,7 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
-    path(
-        "",testfinal, name= 'finaltest'
-    )
+    path("", testfinal, name="finaltest"),
 ]
 
 if settings.DEBUG:
