@@ -9,7 +9,7 @@
        
 
         {% for tag in posts.tags.all %}
-        <li><a href="{% url 'blog:tag' tag_name=tag.name %}">{{tag.name}}</a></li>
+        <li><a href="{% url 'blog:tag' name=tag.name %}">{{tag.name}}</a></li>
 
 
 

@@ -13,6 +13,7 @@ from .forms import PostForm
 from django.views.generic.edit import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, PageNotAnInteger , EmptyPage
+from taggit.models import Tag
 
 
 # Create your views here.
@@ -80,30 +81,9 @@ def blog_posting(request):
     posts = Post.objects.filter(status=True)  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
     return render(request, "blog/blog-posting.html", {"posts": posts})\
     
-def blog_tag_view(request,cat_name=None , author_username = None , tag_name = None):
-    posts = Post.objects.filter(status=True)
-    if cat_name:
-            posts = posts.filter( categories__name = cat_name )
-    if author_username:
-         posts = posts.filter( author__username = author_username )
-         
-    if tag_name :
-   
-          posts = posts.filter(tags__name__in=[tag_name])
-    
-    # try:
-    #      paginator = Paginator(posts,2)
-    #      page_number = request.GET.get("page")
-    #      posts = paginator.get_page(page_number)
-    # except PageNotAnInteger:
-    #      # If page is not an integer, deliver first page.
-    #      posts = paginator.page(1)
-         
-    # except EmptyPage:
-    #      # If page is out of range (e.g. 9999), deliver last page of results.
-    #      posts = paginator.page(paginator.num_pages)
 
 
-    context = {'posts': posts}
-
-    return render(request,"blog/blog-posting.html" , context)
+def tagged_posts(request, name):
+    tag = Tag.objects.get(name=name)
+    posts = Post.objects.filter(tags=tag)
+    return render(request, 'blog/blog-tags.html', {'posts': posts, 'tag': tag})

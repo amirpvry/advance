@@ -27,7 +27,7 @@ services:
   workers:
     build: .
     container_name: workers
-    command: celery -A core worker --loglevel=info && pip install django-taggit
+    command: celery -A core worker --loglevel=info 
     volumes:
       - ./core:/app
     depends_on:
