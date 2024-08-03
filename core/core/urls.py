@@ -23,6 +23,9 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.http import HttpResponse
+from django.conf.urls.i18n import i18n_patterns
+from django.views.i18n import set_language
+
 
 
 def testfinal(request):
@@ -68,6 +71,11 @@ urlpatterns = [
     ),
     
 ]
+
+urlpatterns += i18n_patterns(
+    path('change_language/', set_language, name='set_language'),
+    # مسیرهای دیگر
+)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

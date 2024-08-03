@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import home_view,about_view,trademark,online_service,copyright_view,design_view,ipserver_view,translation_view
+from .views import home_view,about_view,trademark,online_service,copyright_view,design_view,ipserver_view,translation_view,fa_copyright_view
 
 
 app_name = "main"
@@ -13,5 +13,6 @@ urlpatterns = [
     path('ip-server', ipserver_view, name='ip-server'),
     path('design', design_view, name='design'),
     path('copyright', copyright_view, name='copyright'),
+    path('fa/copyright', fa_copyright_view, name='fa_copyright'),
     
 ]

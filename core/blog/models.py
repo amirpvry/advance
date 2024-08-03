@@ -2,6 +2,7 @@ from django.db import models
 
 
 from django.urls import reverse
+from taggit.managers import TaggableManager
 
 # Create your models here.
 
@@ -16,6 +17,8 @@ class Post(models.Model):
 
     content = models.TextField()
     categories = models.ForeignKey("Categories", on_delete=models.SET_NULL, null=True)
+    tags = TaggableManager()
+
 
     status = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True)

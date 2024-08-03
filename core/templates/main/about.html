@@ -1,11 +1,35 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block content %}
+
+{% for post in Post.object.all %}
+
+<li><a href="https://abounaja.com/blogs/procedural-abstraction-in-ip">{{post.content}}Procedural Abstraction in Intellectual Property</a></li>
+{% endfor %}
+{{Post.content}}
+
+<a><h2>{{object.id}} - {{object}}</h2>
+    <small>{{object.author}} - {{object.publish_date}} - <h1>{{ object.title }}</h1> </small>
+    <h1>blog posts</h1>
+    {% for post in posts %}
+    <i>
+        <a href="{% url 'blog:post-detail' pk=post.id %}">
+            <h2>{{post.id}} - {{post.title}} </h2>
+            <a href="{% url 'blog:post-update' pk=post.id %}">
+            <h2>edit</h2>
+        </a>
+        <a href="{% url 'blog:post-delete' pk=post.id %}">
+            <h2>delete</h2>
+        </a>
+        </a> 
 
 
+    </i>
 
+  
+    <small>{{post.author.first_name}} - {{post.publish_date}}  </small>
+
+    {%endfor%}
 
 
     <h2>About Us</h2>
     <p>This is the content of the about page.</p>
-{% endblock %}
+

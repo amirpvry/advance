@@ -1,0 +1,163 @@
+{% extends 'base_blog.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container margin-bottom margin-top animatedParent">
+	<style>
+        .post-grid {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .last-news-img-wrap {
+            flex: 0 0 auto;
+        }
+
+        .post-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .last-news-info-wrap {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .last-news-title {
+            overflow: hidden;
+            max-height: 86px;
+            text-overflow: ellipsis !important;
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+
+        .read-more-btn {
+            margin-top: auto;
+            text-align: right;
+        }
+	</style>
+	<div class="row">
+		<div class="col-xl-9 col-lg-9 col-12">
+			<div class="row">
+				{% for post in posts%}
+									<div class="col-xl-4 col-lg-4 col-sm-6 col-12 pr-2 pl-2 animated bounceInLeft delay-250">
+					<!--===================== Post ========================-->
+					<article class="post post-grid">
+							<div class="last-news-img-wrap">
+								<a href="{{ post.get_absolute_url }}">
+									<img src="{{ post.image.url }}">
+								</a>
+							</div>
+							<div class="last-news-info-wrap">
+								<h4 class="last-news-date">{{post.publish_date}}</h4>
+								<a href="https://abounaja.com/blogs/procedural-abstraction-in-ip"><h4 title="Procedural Abstraction in Intellectual Property" style="overflow: hidden;max-height: 86px;text-overflow: ellipsis !important;-webkit-line-clamp: 3;display: -webkit-box;-webkit-box-orient: vertical;" class="last-news-title">{{post.title}}</h4></a>
+								<a href="https://abounaja.com/blogs/procedural-abstraction-in-ip" class="read-more-btn">Read More <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="8" viewBox="0 0 11 8"><defs><path id="zqnma2" d="M246.3 6201.78a.31.31 0 0 1 0 .44l-3.26 3.3a.3.3 0 0 1-.44 0 .31.31 0 0 1 0-.45l2.73-2.76h-8.41a.31.31 0 0 1-.31-.31c0-.17.14-.31.3-.31h8.42l-2.73-2.76a.31.31 0 0 1 0-.44.3.3 0 0 1 .44 0z"/></defs><g><g transform="translate(-236 -6198)"><use fill="#20add0" xlink:href="#zqnma2"/></g></g></svg></a>
+							</div>
+					</article>
+
+					<!--===================== End of Post ========================-->
+				</div>
+				{% endfor %}
+
+								
+			</div>
+
+		
+
+
+			<ul class="pagination">
+
+	<!-- <li class="disabled page-item"><span style="pointer-events: none;color: grey"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 38 28"><defs><path id="nvcba" d="M1377.36 5486.14a1.21 1.21 0 0 0 0 1.7l12.67 12.8a1.2 1.2 0 0 0 1.7 0c.47-.47.47-1.24 0-1.71l-10.63-10.73h32.7a1.2 1.2 0 1 0 0-2.42h-32.7l10.63-10.72c.47-.48.47-1.24 0-1.72a1.2 1.2 0 0 0-1.7 0z"></path></defs><g><g transform="translate(-1377 -5473)"><use fill="#20add0" xlink:href="#nvcba"></use></g></g></svg></span></li> -->
+
+
+	
+
+
+			<li class="active page-item inside"><a href="https://abounaja.com/the-hub/page/1"><span>01</span></a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/2">02</a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/3">03</a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/4">04</a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/5">05</a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/6">06</a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/7">07</a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/8">08</a></li>
+				
+	<li class="disabled page-item"><span>...</span></li>
+
+
+		
+
+
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/12">12</a></li>
+			<li class="page-item inside"><a href="https://abounaja.com/the-hub/page/13">13</a></li>
+			
+
+	<!-- <li class="page-item"><a href="https://abounaja.com/the-hub?page=2" rel="next"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 38 28"><defs><path id="vl9xa" d="M1500.64 5486.14a1.21 1.21 0 0 1 0 1.7l-12.67 12.8a1.2 1.2 0 0 1-1.7 0 1.22 1.22 0 0 1 0-1.71l10.63-10.73h-32.7a1.2 1.2 0 0 1-1.2-1.2c0-.68.54-1.22 1.2-1.22h32.7l-10.63-10.72a1.22 1.22 0 0 1 0-1.72 1.2 1.2 0 0 1 1.7 0z"></path></defs><g><g transform="translate(-1463 -5473)"><use fill="#20add0" xlink:href="#vl9xa"></use></g></g></svg></a></li> -->
+</ul>
+
+
+
+			<!-- <ul class="pagination">
+				<li class="page-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 38 28"><defs><path id="nvcba" d="M1377.36 5486.14a1.21 1.21 0 0 0 0 1.7l12.67 12.8a1.2 1.2 0 0 0 1.7 0c.47-.47.47-1.24 0-1.71l-10.63-10.73h32.7a1.2 1.2 0 1 0 0-2.42h-32.7l10.63-10.72c.47-.48.47-1.24 0-1.72a1.2 1.2 0 0 0-1.7 0z"></path></defs><g><g transform="translate(-1377 -5473)"><use fill="#20add0" xlink:href="#nvcba"></use></g></g></svg></a></li>
+				<li class="page-item inside active disabled"><a href="#">01</a></li>
+				<li class="page-item inside"><a href="#">02</a></li>
+				<li class="page-item inside"><a href="#">03</a></li>
+				<li class="page-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 38 28"><defs><path id="vl9xa" d="M1500.64 5486.14a1.21 1.21 0 0 1 0 1.7l-12.67 12.8a1.2 1.2 0 0 1-1.7 0 1.22 1.22 0 0 1 0-1.71l10.63-10.73h-32.7a1.2 1.2 0 0 1-1.2-1.2c0-.68.54-1.22 1.2-1.22h32.7l-10.63-10.72a1.22 1.22 0 0 1 0-1.72 1.2 1.2 0 0 1 1.7 0z"></path></defs><g><g transform="translate(-1463 -5473)"><use fill="#20add0" xlink:href="#vl9xa"></use></g></g></svg></a></li>
+			</ul> -->
+		</div>
+		<div class="col-xl-3 col-lg-3 col-12 animated bounceInRight delay-250">
+			<aside>
+				<!--===================== Widget Category ========================-->
+				{% include "blog/blog-tags.html" %}
+				<!--===================== End of Widget Category ========================-->
+				<!--===================== Widget Post ========================-->
+				<div class="widget-post">
+					<h6 class="widget-title">Most Recent</h6>
+					<ul class="list-unstyled">
+													<li><a href="https://abounaja.com/blogs/procedural-abstraction-in-ip">Procedural Abstraction in Intellectual Property</a></li>
+													<li><a href="https://abounaja.com/blogs/trademark-registration-in-bahrain">Complete Guide to Trademark Registration in Bahrain</a></li>
+													<li><a href="https://abounaja.com/blogs/copyright-infringement-on-social-media">Copyright Infringement on Social Media: How to Prevent</a></li>
+												</ul>
+				</div>
+				<!--===================== End of Widget Post ========================-->
+				<!--===================== Widget Archive ========================-->
+				<div class="widget-archive">
+					<h6 class="widget-title">Archive</h6>
+					<ul class="list-unstyled">
+													<li><a href="https://abounaja.com/the-hub/archives/May/2024">May 2024<span>(2)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/April/2024">April 2024<span>(6)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/March/2024">March 2024<span>(4)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/February/2024">February 2024<span>(5)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/January/2024">January 2024<span>(4)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/December/2023">December 2023<span>(5)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/November/2023">November 2023<span>(2)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/August/2023">August 2023<span>(1)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/June/2023">June 2023<span>(1)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/May/2023">May 2023<span>(2)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/April/2023">April 2023<span>(2)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/February/2023">February 2023<span>(3)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/January/2023">January 2023<span>(2)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/November/2022">November 2022<span>(1)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/September/2022">September 2022<span>(1)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/August/2022">August 2022<span>(1)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/April/2022">April 2022<span>(1)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/December/2021">December 2021<span>(3)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/October/2021">October 2021<span>(2)</span></a></li>
+													<li><a href="https://abounaja.com/the-hub/archives/September/2021">September 2021<span>(1)</span></a></li>
+											
+					</ul>
+				</div>
+				<!--===================== End of Widget Archive ========================-->
+			</aside>
+		</div>
+	</div>
+</div>
+
+
+    
+{% endblock %}

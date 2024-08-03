@@ -20,5 +20,6 @@ def ipserver_view(request):
     return render(request, 'main/ip-server.html')
 def design_view(request):
     return render(request, 'main/design.html')
-
+def fa_copyright_view(request):
+    return render(request, 'main/copyright_fa.html')
 
