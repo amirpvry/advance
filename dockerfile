@@ -6,7 +6,6 @@ ENV PYTHONNUNBUFFERED=1
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y gettext
 
 COPY requirements.txt ./
 RUN pip install --upgrade pip
