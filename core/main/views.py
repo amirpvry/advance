@@ -23,3 +23,14 @@ def design_view(request):
 def fa_copyright_view(request):
     return render(request, 'main/copyright_fa.html')
 
+def homepage_view(request):
+    return render(request, 'main/home.html')
+
+def services_view(request):
+    return render(request, 'main/services.html')
+
+def about_us_view(request):
+    return render(request, 'main/about_us.html')
+def contact_us_view(request):
+    return render(request, 'main/contact_us.html')
+
