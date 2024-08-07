@@ -6,12 +6,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
+jobs:
+
 
   
   Deploy:
     if: ${{ always() && contains(join(needs.*.result, ','), 'success')}}
     name: deploy
- 
+
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
