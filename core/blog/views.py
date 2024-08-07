@@ -12,7 +12,7 @@ from django.views.generic.list import ListView
 from .forms import PostForm
 from django.views.generic.edit import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.paginator import Paginator, PageNotAnInteger , EmptyPage
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from taggit.models import Tag
 
 
@@ -76,14 +76,14 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
     success_url = "/blog/post/"
 
 
-
 def blog_posting(request):
-    posts = Post.objects.filter(status=True)  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
-    return render(request, "blog/blog-posting.html", {"posts": posts})\
-    
+    posts = Post.objects.filter(
+        status=True
+    )  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
+    return render(request, "blog/blog-posting.html", {"posts": posts})
 
 
 def tagged_posts(request, name):
     tag = Tag.objects.get(name=name)
     posts = Post.objects.filter(tags=tag)
-    return render(request, 'blog/blog-tags.html', {'posts': posts, 'tag': tag})
+    return render(request, "blog/blog-tags.html", {"posts": posts, "tag": tag})

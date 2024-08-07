@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts",
     "blog",
-    'main',
+    "main",
     "rest_framework",
     "rest_framework_simplejwt",
     "rest_framework.authtoken",
@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     "drf_yasg",
     "mail_templated",
     "django_celery_beat",
- 
 ]
 
 MIDDLEWARE = [
@@ -64,7 +63,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    'django.middleware.locale.LocaleMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -85,7 +84,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                'core.context_processors.language_context'
+                "core.context_processors.language_context",
             ],
         },
     },
@@ -130,12 +129,14 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = "en-us"
 
 LANGUAGES = [
-    ('en', _('English')),
-    ('fr', _('French')),
-    ('de', _('German')),
+    ("en", _("English")),
+    ("fr", _("French")),
+    ("de", _("German")),
 ]
 LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale'),  # مسیر به دایرکتوری که فایل‌های ترجمه در آن ذخیره می‌شوند
+    os.path.join(
+        BASE_DIR, "locale"
+    ),  # مسیر به دایرکتوری که فایل‌های ترجمه در آن ذخیره می‌شوند
 ]
 TIME_ZONE = "UTC"
 

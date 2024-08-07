@@ -28,6 +28,6 @@ urlpatterns = [
         name="post-delete",
     ),
     path("api/v1/", include("blog.api.v1.urls")),
-    path('blog-posting/', blog_posting, name='blog-posting'),
-    path('tag/<str:tag_name>', tagged_posts, name= 'tag' ),
+    path("blog-posting/", blog_posting, name="blog-posting"),
+    path("tag/<str:tag_name>", tagged_posts, name="tag"),
 ]

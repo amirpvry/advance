@@ -2,6 +2,7 @@ from django.db import models
 
 
 from django.urls import reverse
+
 # from taggit.managers import TaggableManager
 
 # Create your models here.
@@ -19,7 +20,6 @@ class Post(models.Model):
     categories = models.ForeignKey("Categories", on_delete=models.SET_NULL, null=True)
     # tags = TaggableManager()
 
-
     status = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True)
     publish_date = models.DateTimeField(null=True)
@@ -33,6 +33,7 @@ class Post(models.Model):
     #     return reverse('blog:api-v1:post-detail', kwargs={'pk': self.pk})
     def get_absolute_api_url(self):
         return reverse("blog:api-v1:post-detail", kwargs={"pk": self})
+
     def get_absolute_url(self):
         return reverse("blog:post-detail", kwargs={"pk": self.pk})
 

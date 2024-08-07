@@ -27,7 +27,6 @@ from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import set_language
 
 
-
 def testfinal(request):
     return HttpResponse("<h1> sadasd </h1>")
 
@@ -47,7 +46,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('',include('main.urls')),
+    path("", include("main.urls")),
     path(
         "blog/",
         include("blog.urls"),
@@ -69,11 +68,10 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
-    
 ]
 
 urlpatterns += i18n_patterns(
-    path('change_language/', set_language, name='set_language'),
+    path("change_language/", set_language, name="set_language"),
     # مسیرهای دیگر
 )
 
