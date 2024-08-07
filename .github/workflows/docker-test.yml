@@ -8,20 +8,20 @@ on:
 
 jobs:
 
-  # Test:
-  #   name: test
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v4
-  #   - name: Build docker compose
-  #     run: docker-compose up -d
-  #   - name: run test
-  #     run: docker exec backend sh -c "flake8 && pytest ."
+  Test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build docker compose
+      run: docker-compose up -d
+    - name: run test
+      run: docker exec backend sh -c "flake8 && pytest ."
   
   Deploy:
     if: ${{ always() && contains(join(needs.*.result, ','), 'success')}}
     name: deploy
-    # needs: Test
+    needs: Test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
