@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'Persion_base.html' %}
 {% load static %}
 {% block content %}
 
@@ -12,9 +12,9 @@
 							<div class="text" style="padding-top: 0px;max-width: 600px">
 						
 						<div class="">
-							<ul class="breadcrumbs d-none d-md-block"><li><a href="https://abounaja.com">Home</a> ▸</li><li><a href="https://abounaja.com/services">Practice Areas</a> ▸</li><li><a href="https://abounaja.com/services/patent" title="Patent">Patent</a></li></ul>
+							<ul class="breadcrumbs d-none d-md-block"><li><a href="{% url  'main:homepage_fa' %}">خانه</a> ▸</li><li><a href="{% url  'main:services_fa' %}">خدمات ما</a> ▸</li><li><a href="{% url  'main:ip-server_fa' %}" title="Patent">مالکیت فکری</a></li></ul>
 
-							<p class="product-title" itemprop="name"> IP Services</p>
+							<p class="product-title" itemprop="name"> خدمات مالکیت فکری</p>
 
 
 							<div class="overview-pricing-cta ">
@@ -49,49 +49,14 @@
 
 	<div class="second-section container" style="padding-left: 0px">
 	 <div class="justify-content-center text-center">
-					<h2 class="h2-main">Intellectual Property Services</h2>
+					<h2 class="h2-main">خدمات مالکیت فکری</h2>
 					<div class="clearfix"></div>
 				
 				 
 				</div>
 	</div>
 	<!--===================== End of First Section ========================-->
-	<div class="reviews-wrapper animatedParent" style="display: none;">
-		<div class="container">
-			<div class="row">
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-250">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Lora Michel</h4>
-						<p class="text-uppercase">Patel Psych</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-500">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Nina Rich</h4>
-						<p class="text-uppercase">Panax Pharma</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-750">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Robert Patinson</h4>
-						<p>HoolaHire</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 
 
@@ -100,7 +65,7 @@
 			<div class="row align-items-center">
 			    
 			<p style="text-align:justify !important; padding:15px">
-				Our attorneys assist clients in the development of a tailored intellectual property portfolio, and help procure patents, trademarks, trade secrets and many other forms of intellectual property all over the world. 	</p>
+				وکلای ما به مشتریان در توسعه یک پرتفوی مالکیت فکری سفارشی کمک می‌کنند و به آنها در ثبت  پتنت‌ها، علائم تجاری، اسرار تجاری و بسیاری دیگر از اشکال مالکیت فکری در سراسر جهان یاری می‌رسانند.	</p>
 				<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
@@ -108,9 +73,9 @@
 							<img src="{% static 'assets/img/ServicesIcons/IP_Portfolio_Management/IP_Portfolio_Management.png' %}" alt="images"  width='101' height='101'>  
 						</div>
 						 <div class="leftalign">
-						    <h4>IP Portfolio Management</h4>
+						    <h4>مدیریت پرتفوی مالکیت فکری</h4>
 						
-							<div class="review-text leftalign">We identify and eliminate the weaknesses in your IP portfolio that celluloid vultures could use as leverage to try to take control of your IP or make money from your good name. As for IP compliance, we keep track of filing and registering your copyrights, design patents, trademarks and customs recordals for you. </div>
+							<div class="review-text leftalign">ما نقاط ضعف پرتفوی مالکیت فکری شما را شناسایی و حذف می‌کنیم تا مانع سوءاستفاده‌های احتمالی از نام و اعتبار شما شویم. در زمینه رعایت قوانین مالکیت فکری، ما مسئولیت پیگیری و ثبت حق‌تألیف‌ها، پتنت‌های طراحی، علائم تجاری و ثبت گمرکی را بر عهده می‌گیریم. </div>
 					    </div>
 					</div>
 					<!-- end  -->
@@ -124,9 +89,9 @@
 						</div>
 						
 						<div class="leftalign">
-						    <h4>Intellectual Property Valuation Services</h4>
+						    <h4>خدمات ارزیابی مالکیت فکری</h4>
 						
-							<div class="review-text leftalign">Our valuation specialists understand the complexities of planning and valuing varied intellectual property (IP) portfolios in the context of sector dynamics and the broad IP market. We examine the interplay between your intellectual property and its applications, exploring who controls vital IP in your target business area, and the opportunities and exposures that follow.</div>
+							<div class="review-text leftalign">متخصصان ارزیابی ما پیچیدگی‌های برنامه‌ریزی و ارزیابی پرتفوی‌های مختلف مالکیت فکری (IP) را در چارچوب پویایی‌های بخش و بازار گسترده IP درک می‌کنند. ما به بررسی تعامل بین مالکیت فکری شما و کاربردهای آن می‌پردازیم، تحلیل می‌کنیم که چه کسانی IP حیاتی در حوزه کسب‌وکار هدف شما را کنترل می‌کنند و فرصت‌ها و مخاطراتی که از این امر ناشی می‌شود را شناسایی می‌کنیم.</div>
 					    </div>
 					    
 					 
@@ -143,9 +108,9 @@
 						
 						
 						<div class="leftalign">
-						    <h4>IP Audit</h4>
+						    <h4>ممیزی مالکیت فکری</h4>
 						
-							<div class="review-text leftalign">IP audits help you identify hidden assets, test technology, spot infringement issues, and evaluate acquisition candidates. We can also evaluate your IP strategically, looking at how your own strategic and market models fit with your investment in the costs for acquiring and defending intellectual property rights. Our ultimate goal is to identify best practices for realising your ideas. We help you define the processes for getting the value of your ideas into the marketplace and guard your IP today and in the future, setting the stage for your business to prosper.</div>
+							<div class="review-text leftalign">ممیزی‌های مالکیت فکری به شما کمک می‌کنند تا دارایی‌های پنهان را شناسایی کنید، فناوری را ارزیابی کنید، مشکلات و  نقض ها را تشخیص دهید و گزینه‌های خرید را بررسی کنید. ما می‌توانیم IP شما را به صورت استراتژیک ارزیابی کنیم و بررسی کنیم که مدل‌های استراتژیک و بازاری شما چگونه با سرمایه‌گذاری در هزینه‌های کسب و دفاع از حقوق مالکیت فکری همخوانی دارد. هدف نهایی ما شناسایی بهترین روش‌ها برای به تحقق رساندن ایده‌های شما است. ما به شما کمک می‌کنیم فرآیندهایی را برای کسب ارزش ایده‌های خود در بازار تعریف کنید و امروز و در آینده از IP خود محافظت کنید، </div>
 					    </div> 
 					</div>
 					<!-- end  -->
@@ -159,9 +124,9 @@
 						</div>
 						
 							<div class="leftalign">
-						    <h4>IP Licensing and Franchising</h4>
+						    <h4>لیسانس و فرانشیز مالکیت فکری</h4>
 						
-							<div class="review-text leftalign">As the acuity of business acquisitions and buyout increases, dealing with MENA requires a level of business understanding, negotiation saving skills and understanding of different segments. Our firm concentrated on MENA represents a serious cognitive to advise and helps innovators and investor know franchising with a technological advanced era.  </div>
+							<div class="review-text leftalign">با افزایش دقت در خرید و ادغام کسب‌وکارها، تعامل با منطقه خاورمیانه و شمال آفریقا (MENA) نیازمند فهم عمیق کسب‌وکار، مهارت‌های مذاکره و درک بخش‌های مختلف است. شرکت ما که بر ایران تمرکز دارد، به نوآوران و سرمایه‌گذاران در مورد فرانشیز با توجه به عصر پیشرفته فناوری مشاوره می‌دهد و کمک می‌کند.  </div>
 					    </div>
 					     
 						
@@ -177,10 +142,10 @@
 							<img src="{% static 'assets/img/ServicesIcons/IP_Portfolio_Management/Due_Diligence.png' %}" alt="images"  width='101' height='101'>  
 						</div>
 							<div class="leftalign">
-						    <h4>Intellectual Property Due Diligence Services</h4>
+						    <h4>خدمات ارزیابی و بررسی مالکیت فکری</h4>
 						
 							<div class="review-text leftalign">
-								We offer a diversified portfolio of intellectual property due diligence services that identify, evaluate and minimise risks inherent in intangible assets. 
+								ما یک طیف گسترده از خدمات شامل ادغام و تملک، معاملات سهامی، فرایندهای انحلال به دلیل گردش مالی، فروش، معاملات خرید توافقی و دادگاهی، درخواست‌های ورشکستگی، بازسازی بدهی و جمع‌آوری بدهی‌ها را ارائه می‌دهیم. 
 							</div>
 					    </div> 
 
@@ -196,9 +161,9 @@
 						</div>
 						
 							<div class="leftalign">
-						    <h4>	Intellectual Property Protection Services	</h4>
+						    <h4>	خدمات حفاظت از مالکیت فکری	</h4>
 						
-							<div class="review-text leftalign">We provide multinational brand and intellectual protection, from inception to product launch. With a history of over 40 years across the world we continue to afford protection against counterfeiting and harm in the areas of fraud and product diversion. In close cooperation with our clients, our work constructive approach to a complex problem. We offer solutions which minimise – or eliminate – the negative effects on your business due to the wrongful use of your trade marks, designs, patents and copyright.  </div>
+							<div class="review-text leftalign">ما حفاظت برند و مالکیت فکری چندملیتی از مرحله شروع تا عرضه محصول را فراهم می‌کنیم. و خدماتی در برابر جعل و آسیب در زمینه‌های تقلب و انحراف محصول،  ارائه می‌دهیم. با همکاری نزدیک با مشتریان، کار ما نشان‌دهنده رویکردی نوآورانه و سازنده به یک مشکل پیچیده است. ما راه‌حل‌هایی ارائه می‌دهیم که اثرات منفی ناشی از استفاده نادرست از علائم تجاری، طراحی‌ها، پتنت‌ها و حق‌تألیف‌های شما را به حداقل می‌رساند یا از بین می‌برد.  </div>
 					    </div> 
 					
 

@@ -19,9 +19,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:image" content="https://abounaja.com/assets/img/patent.jpg" />
 	<meta property="og:title" content="Patent Search, Registration, Annuity, Recordal | ABOU NAJA" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="{%  url 'main:patent' %}" />
+	<meta property="og:url" content="{%  url 'main:patent_fa' %}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5">
-	<link rel="canonical" href="{%  url 'main:patent' %}">
+	<link rel="canonical" href="{%  url 'main:patent_fa' %}">
 	<!-- Framework Css -->
 	<link rel="stylesheet" type="text/css" href="https://abounaja.com/css/lib/bootstrap.min.css">
 
@@ -279,29 +279,33 @@ body {
 }
 
 header, footer {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     padding: 10px 0;
+    text-align: right;
 }
 
 header h1, footer p {
     text-align: center;
     margin: 0;
+    text-align: right;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    text-align: right;
 }
 
 nav ul li {
     display: inline;
     margin: 0 10px;
+    text-align: right;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #007bff;
+    text-align: right;
 }
 	</style>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -319,7 +323,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-xl-3 col-lg-3 col-md-12">
-					<a href="{% url 'main:homepage'  %}">
+					<a href="{% url 'main:homepage_fa'  %}">
 						<img src="{% static 'assets/img/Picture1.png' %}" class="logo" alt="images">
 					</a>
 				</div>
@@ -327,10 +331,10 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 					<!--===================== Header Block ========================-->
 					<div class="header-block">
 						<ul class="nav-menu list-unstyled list-inline">
-							<li class="list-inline-item"><a href="{% url 'main:about_us' %}">درباره ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+							<li class="list-inline-item"><a href="{% url 'main:about_us_fa' %}">درباره ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 							<li class="list-inline-item hovermenus" onclick="openwedo()">
 
-								<a href="{% url 'main:services' %}" class="desknavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold">-</span></a>
+								<a href="{% url 'main:services_fa' %}" class="desknavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold">-</span></a>
 								<a href="#" class="mobnavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold"> > </span></a>
 
 								<style>
@@ -466,7 +470,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 <div class="container-fluid wedomenu" id="wedomenu">
 	<ul>
 
-	<li class="serviceli"><a href="{% url 'main:trade' %}"><span>Trademark Services</span></a></li>
+	<li class="serviceli"><a href="{% url 'main:trade_fa' %}"><span>Trademark Services</span></a></li>
 		
 			<li class="serviceli"><a href="{% url 'main:online-service' %}"><span>Online Protection Services</span></a></li>
 
@@ -498,9 +502,9 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							
 							
 		
-							<li class="list-inline-item"><a href="{%  url 'blog:blog-posting' %}">Blog<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+							<li class="list-inline-item"><a href="{%  url 'blog:blog-posting' %}">بلاگ<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 
-							<li class="list-inline-item"><a href="{%  url 'main:contact_us' %}">Contact Us<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+							<li class="list-inline-item"><a href="{%  url 'main:contact_us_fa' %}">ارتباط با ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 
 						</ul>
                         
@@ -553,12 +557,12 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                         <div class="inside-column">
                             <h4 class="title">The Firm</h4>
                             <ul class="list-unstyled">
-                                <li><a href="{% url 'main:homepage'  %}">Home</a></li>
-                                <li><a href="{% url 'main:about_us' %}">About Us</a></li>
-                                <li><a href="{% url 'main:services' %}">Our Services</a></li>						
+                                <li><a href="{% url 'main:homepage_fa'  %}">خانه</a></li>
+                                <li><a href="{% url 'main:about_us_fa' %}">درباره ما</a></li>
+                                <li><a href="{% url 'main:services_fa' %}">خدمات ما</a></li>						
                                 
                                 
-                                <li><a href="{%  url 'blog:blog-posting' %}">Blog</a></li>
+                                <li><a href="{%  url 'blog:blog-posting' %}">بلاگ</a></li>
                                 
                             </ul>
                         </div>
@@ -568,7 +572,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                             <h4 class="title">Support</h4>
                             <ul class="list-unstyled">
                 
-                                <li><a href="{%  url 'main:contact_us' %}">Contact Us</a></li>
+                                <li><a href="{%  url 'main:contact_us_fa' %}">ارتباط با ما</a></li>
                                 <!-- <li><a href="https://abounaja.com/faq">FAQ</a></li> -->
                             </ul>
                         </div>
@@ -1079,19 +1083,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
     <div style="margin: 0 auto; width: fit-content;">
     
     
-    <div class="js-cookie-consent cookie-consent">
-    
-    
-        <span class="cookie-consent__message">
-            By continuing to browse you are accepting our   <a href="https://abounaja.com/privacy-policy" style="color: #20add0;font-weight: bold;">Cookie Policy</a>
-            <div id="menu">
-            </div>
-        </span>
-          
-          <button class="js-cookie-consent-agree cookie-consent__agree hvr-ripple-out">
-            Accept & Close  
-         </button>
-         </div>
+
         
     
     </div>
