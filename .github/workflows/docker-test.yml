@@ -2,9 +2,9 @@ name: Docker Django Test
 
 on:
   push:
-    branches: [ "main" , "develope-main-html" ]
+    branches: [  "develope-main-html" ]
   pull_request:
-    branches: [ "main" , "develope-main-html"]
+    branches: [  "develope-main-html"]
 
 jobs:
 
