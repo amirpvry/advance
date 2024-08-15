@@ -58,4 +58,5 @@ jobs:
               cd ${{ secrets.PROJECT}}
               docker-compose -f docker-compose-stage.yml stop
               git pull
+              docker exec backend sh -c "python manage.py collectstatic --noinput"
               docker-compose -f docker-compose-stage.yml restart
