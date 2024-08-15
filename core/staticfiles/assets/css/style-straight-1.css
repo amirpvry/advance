@@ -6,7 +6,7 @@
   /*background: url(../img/background-straight.png) no-repeat center;*/
    /* background: url(../img/faq-bg-straight.png) no-repeat !important;*/
    /*background: url(../img/background-section-straight.jpg) no-repeat;*/
-   background: url(../img/background-reg-block-straight.webp) no-repeat;
+   background: url('static/img/background-reg-block-straight-ezgif.com-webp-to-jpg-converter.jpg') no-repeat;
    
   /* background: url(../img/first-section-bg-straight.png) no-repeat !important;*/
   /*background: #0F4C81;*/
@@ -87,12 +87,11 @@ footer {
   margin-top: -255px;
   margin-bottom: 160px;
 }
-/*background screenpicture*/
 .questions-page .first-section {
   margin-bottom: 177px;
   max-height: 610px;
   /*background: url(../img/faq-bg-straight.png) no-repeat;*/
-  background: url("/static/assets/img/background-reg-block-straight-ezgif.com-webp-to-jpg-converter.jpg") no-repeat;
+  background: url(../img/background-section-straight.jpg) no-repeat;
   background-size: cover;
 }
 .calculator-page .first-section.not-images {

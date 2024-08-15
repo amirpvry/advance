@@ -23,20 +23,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5">
 	<link rel="canonical" href="{%  url 'main:patent' %}">
 	<!-- Framework Css -->
-	<link rel="stylesheet" type="text/css" href="https://abounaja.com/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lib/bootstrap.min.css' %}">
 
 	<!-- Animation -->
-	<link rel="stylesheet" type="text/css" href="https://abounaja.com/css/lib/animations.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lib/animations.min.css' %}">
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700,700i,800,900&font-display=swap" rel="stylesheet">
 	<!-- Style Theme -->
-	<link rel="stylesheet" type="text/css" href="https://abounaja.com/css/style.css?v=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
 	<!-- Responsive Theme -->
-	<link rel="stylesheet" type="text/css" href="https://abounaja.com/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
 	<!-- Style Straight Theme -->
-	<link rel="stylesheet" type="text/css" href="https://abounaja.com/assets/css/style-straight.css?v=5">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style-straight.css' %}">
 	
-		<link rel="stylesheet" type="text/css" href="https://abounaja.com/assets/css/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/select2.min.css' %}">
 	<style type="text/css">
 		 @media(max-width:767px){
         .registration_quote{
@@ -506,7 +507,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                             <a href="{% url 'main:homepage'  %}"><img src="{% static 'assets/img/Picture1.png' %}" alt="images"></a>
                             <p></p>
                             <br>
-                            <div><a target="_blank" href="https://www.goodfirms.co/company/abou-naja-intellectual-property"><img style="width:180px" src="https://assets.goodfirms.co/badges/blue-button/law-firms.svg" title=" Company" alt=" Company"></a></div>
+                            
     
                         </div>
                     </div>
