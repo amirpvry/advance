@@ -48,6 +48,15 @@ services:
       - redis
       - backend
 
+  collectstatic:
+    build: .
+    command: python manage.py collectstatic --noinput
+    volumes:
+      - ./core:/app
+      - static_volume:/app/static
+    depends_on:
+      - backend
+
 volumes:
   static_volume:
   media_volume:
