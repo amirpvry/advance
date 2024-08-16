@@ -2,6 +2,8 @@
 {% load static %}
 {% block content %}
 
+
+
 	<!--===================== First Section ========================-->
 
 
@@ -12,29 +14,31 @@
 							<div class="text" style="padding-top: 0px;max-width: 600px">
 						
 						<div class="">
-							<ul class="breadcrumbs d-none d-md-block"><li><a href="https://abounaja.com">Home</a> ▸</li><li><a href="https://abounaja.com/services">Practice Areas</a> ▸</li><li><a href="https://abounaja.com/services/patent" title="Patent">Patent</a></li></ul>
+							<ul class="breadcrumbs d-none d-md-block"><li><a href="{% url  'main:homepage_fa' %}">خانه</a> ▸</li><li><a href="{% url  'main:services_fa' %}">خدمات</a> ▸</li><li><a href="{% url  'main:copyright_fa' %}" title="Patent">کپی رایت </a></li></ul>
 
-							<p class="product-title" itemprop="name">Patent Registration</p>
+							<p class="product-title" itemprop="name">ثبت کپی رایت</p>
 
-							<h1 style="font-size: 2.7em;
+							<h1 style="font-size: 2.3em;
     line-height: 1.15em;
-    margin: 0 0 .3em;font-weight: normal;" class="registration_quote">شددددددد<br>
-through our smart firm<br class="d-none d-xl-block"> online patent registration.</h1>
-							<p class="subheading" style="line-height: 1.2em;
-    margin: 0 0 1.1em;font-size: 1.1em">Safeguard your inventions with simple and convenient steps. <br>Start your registration today.</p>
+    margin: 0 0 .3em;font-weight: normal;" class="registration_quote">اطمینان حاصل کنید که مالکیت معنوی شما محافظت می‌شود. فرآیند حفاظت از کپی رایت را از خانه شروع کنید.
+<br>
+<br class="d-none d-xl-block"> </h1>
+							
 
 							<div class="overview-pricing-cta ">
 	<!-- 							<p class="button-top" style="font-size: 1.1em;line-height: 1.2em;    margin: 40px 0 10px;
     padding-left: 0;
     text-align: center;width: 405px">Most people complete our questionnaire in under 15 minutes.<br></p> -->
-			 				<a id="pt-reg" " class="btn btn-primary" href="https://abounaja.com/patent-registration" style="font-size: 1.2em; 
+
+	
+			 				<!-- <a id="pt-reg" " class="btn btn-primary" href="https://abounaja.com/patent-registration" style="font-size: 1.2em; 
      max-width: 400px;  padding: .7em 0;    text-align: center;border: 0;-webkit-border-radius: 4px; 
     moz-border-radius: 4px; 
     ms-border-radius: 4px; 
     border-radius: 4px; 
     margin: 0 0 .3em; 
      width: 100%; 
-    display: inline-block;color: white">Start my Patent Registration</a>
+    display: inline-block;color: white">Start my Patent Registration</a> -->
 								
 								
 								<!-- <p class="button-bottom" style="text-align: center;width: 400px">Pricing starts at $199 + Federal filing fees</p> -->
@@ -62,68 +66,31 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 
 	<div class="second-section container" style="padding-left: 0px">
 	 <div class="justify-content-center text-center">
-					<h2 class="h2-main">Patent Services</h2>
+					<h2 class="h2-main">کپی رایت</h2>
 					<div class="clearfix"></div>
 				
 				 
 				</div>
 	</div>
 	<!--===================== End of First Section ========================-->
-	<div class="reviews-wrapper animatedParent" style="display: none;">
-		<div class="container">
-			<div class="row">
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-250">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Lora Michel</h4>
-						<p class="text-uppercase">Patel Psych</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-500">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Nina Rich</h4>
-						<p class="text-uppercase">Panax Pharma</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-750">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Robert Patinson</h4>
-						<p>HoolaHire</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 
 
 <div class="container-fluid live-currency animatedParent boxes" style="overflow: inherit; padding: 15px 0">
 		<div class="container">
 			<div class="row align-items-center">
 			    
-			<p style="text-align:justify !important; padding:15px">
-		Jannesari associate Intellectua is a regional pioneer in the application and enforcement of patent laws. It has a profound team of former patent examiners and industry-leading attorneys. The company has a robust corps of patent strategists and litigators, who diligently and aggressively enforce your rights on global scales. 	</p>
+			<p style="text-align:justify !important; padding:15px">اصطلاح کپی رایت به حقوق خالقان آثار اصلی‌شان اشاره دارد، به ویژه آثار هنری، ادبی و مشابه، بدون توجه به نوع، فرم، عملکرد، هدف، رسانه یا روش‌های فنی مورد استفاده و محل ایجاد یا انتشار اثر. از آنجا که کپی رایت اغلب به عنوان یک ابزار گسترده‌ برای اجرای قانون کپی رایت (به ویژه اصل حفاظت خودکار کنوانسیون برن) استفاده می‌شود، کپی رایت به هر اثر اصلی نویسندگی نیز اشاره دارد.
+				</p>
 				<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
 						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/Search.png' %}" alt="images"  width='101' height='101'>  
+							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/download (1).png' %}" alt="images"  width='90' height='90'>  
 						</div>
 						 <div class="leftalign">
-						    <h4>Patent Search</h4>
+						    <h4>ثبت کپی رایت</h4>
 						
-							<div class="review-text leftalign">Jannesari associate Intellectua conducts patent searches with the aim of discovering and evaluating previously issued patents. We compare detected similar inventions to your invention and then draft memorandums outlining important similarities between your invention and a detected similar or equivalent patent. Our Patent Experts then conduct in-depth research and provide you with transparent advice on whether your invention is patentable. </div>
+							<div class="review-text leftalign">ما می‌دانیم که قوانین مربوط به کپی رایت در کشور های  مختلف از نظر استانداردهای قانونی و روش‌های صدور مجوز متفاوت است. با تکیه بر تخصص وکلای مجرب و آگاه به قوانین ایران ، ما به شما در مورد بهترین روش‌ها برای ثبت کپی رایت و در صورت نیاز، اجرای کپی رایت مشاوره می‌دهیم. </div>
 					    </div>
 					</div>
 					<!-- end  -->
@@ -133,13 +100,13 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
 						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/Filing_Prosecution.png'%}" alt="images"  width='101' height='101'>  
+							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/images (1).png'%}" alt="images"  width='90' height='90'>  
 						</div>
 						
 						<div class="leftalign">
-						    <h4>Patent Filing and Prosecution up to Grant</h4>
+						    <h4>نقض کپی رایت: اجرا و دعوی قضایی</h4>
 						
-							<div class="review-text leftalign">The filing stage marks the commencement of an invention's patenting life cycle. Although patent drafting is often performed manually, it requires concentration, expertise, and technical acumen. Our patent attorneys consult on nuanced freedom-to-operate assessments, filing-based due diligence, and outstanding strategies for licensing policies across all stages of the patenting process. This ensures that our attorneys also enforce undeniable prosecution tactics, if needed.</div>
+							<div class="review-text leftalign">اختلافات ناشی از نقض کپی رایت از طریق داوری، اطلاعیه‌های «توقف کار»، دستورات حذف یا اقدام قانونی حل و فصل می‌شوند..</div>
 					    </div>
 					    
 					 
@@ -147,112 +114,9 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 					<!-- end  -->
 				</div>
 				
-				<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
-					<!-- start -->
-					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
-						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/Maintenance.png' %}" alt="images"  width='101' height='101'>  
-						</div>
-						
-						
-						<div class="leftalign">
-						    <h4>Patent Maintenance</h4>
-						
-							<div class="review-text leftalign">Filed patents are subject to annual renewals through an annuity fee. Such are usually due by the fiscal year of the patent’s official filing date. Our Patent specialists ensure that all deadlines are maintained, thus warranting that your secured patent rights remain intact and eliminate any possibility of lapsed patents. Our patent maintenance strategies assure the welfare of your rights while tenaciously prohibiting rivals from trespassing your patent functionalities.</div>
-					    </div> 
-					</div>
-					<!-- end  -->
-				</div>
 				
-				<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
-					<!-- start -->
-					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
-						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/Recordals.png' %}" alt="images"  width='101' height='101'>  
-						</div>
-						
-							<div class="leftalign">
-						    <h4>Patent Recordals</h4>
-						
-							<div class="review-text leftalign">Patent ownership is ephemeral and can undergo ownership-based changes. Our Patent Recordal Unit legally declares and documents such changes through legally binding patent Recordals. A patent may be assigned, then sold, and then assigned again. Such amendments are one of our fortes and we swiftly and skilfully document said changes for the express purpose of keeping your legal rights current and secure with respective patent licensing authorities.  </div>
-					    </div>
-					     
-						
+				
 
-					</div>
-					<!-- end  -->
-				</div>
-				
-				<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
-					<!-- start -->
-					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
-						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/Appeals_Oppositions.png' %}" alt="images"  width='101' height='101'>  
-						</div>
-							<div class="leftalign">
-						    <h4>Patent Appeals and Oppositions</h4>
-						
-							<div class="review-text leftalign">
-							A winning and distinct patent will frequently get contested. Our patent attorneys oversee and evaluate appeals and oppositions in real time and formulate factual  stratagems by analysing the contesting grounds.  Accordingly, we purposefully constrict the scope of all opposing claims and seek to invalidate allegations through timely filing of fact-based and verifiable counter-oppositions and appeals.
-							</div>
-					    </div> 
-
-					</div>
-					<!-- end  -->
-				</div>
-				
-				<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
-					<!-- start -->
-					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
-						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/Infringement_Enforcement.png' %}" alt="images"  width='101' height='101'>  
-						</div>
-						
-							<div class="leftalign">
-						    <h4>	Patent Infringement, Enforcement & Litigation	</h4>
-						
-							<div class="review-text leftalign">Jannesari associate Intellectua has successfully litigated several patent infringement lawsuits using in-depth analysis of detected violations and its scope of claims. We rigorously litigate any patent violations in federal courts in the MENA region. Our litigation policies serve you through preliminary and declaratory injunctions, reaching fair settlements, and secure favourable post-trial decisions on your behalf.  </div>
-					    </div> 
-					
-
-					</div>
-					<!-- end  -->
-				</div>
-				
-				<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
-					<!-- start -->
-					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
-						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Trademark_Services/Watch.png' %}" alt="images"  width='101' height='101'>  
-						</div>
-						
-							<div class="leftalign">
-						    <h4>	Patent Watch	</h4>
-						
-							<div class="review-text leftalign">Sustaining your patent's market value requires constant surveillance. Through our intricate Patent Watch operation, our patent attorneys  focus on patent watch proceedings. This detects and prohibits the filing of patents identical or similar to yours. This service is detrimental in eliminating financial loss and halts illegitimate acts, such as violation of your rights' to your exclusive use of your patent. </div>
-					    </div> 
-						 
-
-					</div>
-					<!-- end  -->
-				</div>
-				
-				  	<div class="col-md-4 live-currency-div1 animated bounceInLeft delay-250" >
-					<!-- start -->
-					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
-						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/Patent_Services/Drafting.png' %}" alt="images"  width='101' height='101'>  
-						</div>
-					
-	                <div class="leftalign">
-						    <h4>	Patent Drafting </h4>
-						
-							<div class="review-text leftalign">We are adamant that the method of drafting patent submissions must be a joint collaboration between us and the inventor. Prior to drafting your patent application, our patent experts diligently grasp the core of your invention to reliably appraise what makes your invention unique against existing prior art. Our attorneys' comprehensive drafting know-how and patent law knowledge, aim to ensure that all submissions are up to par; thus warranting timely acceptance by local patent offices. </div>
-					    </div> 
-					</div>
-					<!-- end  -->
-				</div>
-				
 				 
 				 
 				</div>
@@ -270,30 +134,7 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 	<!--===================== End of Live Currency ========================-->
 
 
-	<div class="reviews-wrapper animatedParent">
-		<div class="container">
-			   <div class="justify-content-center text-center">
-					<h2>How it works</h2>
-					<div class="clearfix"></div>
-				
-					<p class="subheading">Our 3-step smart registration is quick and convenient.</p>
-				</div>
-				<div class="row justify-content-center text-center" style="margin-top: 30px">
-					<article class="col-md-4">
-						<img src="https://abounaja.com/assets/img/registration/checklist.png" alt="" title="">
-						<p><strong>1. Complete our patent questionnaire.</strong></p>
-					</article>
-					<article class="col-md-4">
-						<img src="https://abounaja.com/assets/img/registration/search-doc.png" alt="" title="">
-						<p><strong>2. Our patent attorney reviews your information.</strong></p>
-					</article>
-					<article class="col-md-4">
-						<img src="https://abounaja.com/assets/img/registration/mail-doc.png" alt="" title="">
-						<p><strong>3. Our patent attorney prepares and files your application.</strong></p>
-					</article>
-			   </div>
-		</div>
-	 </div>
+	
 
 
 	  <div class="container">
@@ -302,28 +143,21 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
        	<br>
        	<div class="text-head text-center">
 					<h5>FAQ</h5>
-					<h2 class="h2-main">Questions you often ask</h2>
+					<h2 class="h2-main">سوالات پرتکرار</h2>
 				</div>
 	 <!--===================== Accordion ========================-->
 				<div id="accordion" class="animatedParent">
 					<!--===================== Accordion Content ========================-->
 					<div class="accordion-content animated bounceInUp delay-250" style="background: #eef0f2">
 						<div class="accordion-header" id="headingOne">
-							<button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Does my invention qualify for a patent registration?<svg version="1.1" id="Layer_14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
+							<button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">چه موضوعاتی تحت قانون کپی رایت قابل حفاظت هستند؟<svg version="1.1" id="Layer_14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
 						</div>
 						<div id="collapse1" class="collapse show" aria-labelledby="headingOne" >
 							<div class="accordion-body">
 								        
 
-                        <p class="no-padding">For your invention to qualify for a patent registration, it must meet one of the following criteria:</p>
-                    <ul>
-                       
-                    	<li><strong>Machinery and Mechanics:</strong> Your invention must contain components that move such as clockwork in a watch or car engines.</li>
-                    	<li><strong>Articles of manufacture:</strong> Immobile but useful components of an object such as bolts, screws and clips.</li> 
-                    	<li><strong>Processes & Methodology:</strong> Products or objects that adhere to pre-programmed functions such as the code in a software or a company’s trade secret handbook.</li>
-                    	<li><strong>Man-made chemical compositions and compounds</strong> such as pharmaceuticals, alternative health products or cleaning detergents.</li>
-
-                    </ul>
+                        <p class="no-padding"> کپی رایت از آثار خلاقانه و ملموس نویسندگی مثل شعر، موسیقی، نمایشنامه، رمان و انواع آثار هنری بصری، عکاسی و نقاشی حفاظت می‌کند. </p>
+        
                 
 							</div>
 						</div>
@@ -332,11 +166,11 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 					<!--===================== Accordion Content ========================-->
 					<div class="accordion-content animated bounceInUp delay-500" style="background: #f2f2f2">
 						<div class="accordion-header" id="heading2">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">When should I file my Patent application?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
+							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">چه حقوقی با ثبت کپی رایت به دست می‌آورم؟<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
 						</div>
 						<div id="collapse2" class="collapse" aria-labelledby="headingTwo">
 							<div class="accordion-body">
-								 <p class="">It is crucial that you submit your patent for registration as soon as your final prototype is complete. <strong>Why?</strong> If your invention is indeed one of a kind, your local patent office will swiftly grant you ownership. </p>
+								 <p class="">وقتی کپی رایت خود را به طور رسمی ثبت کنید، می‌توانید هر کسی که اثر شما را نقض می‌کند یا از آن سوءاستفاده می‌کند، تحت پیگرد قانونی قرار دهید. </p>
 							</div>
 						</div>
 					</div>
@@ -345,11 +179,12 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 					<!--===================== Accordion Content ========================-->
 					<div class="accordion-content animated bounceInUp delay-500" style="background: #eef0f2">
 						<div class="accordion-header" id="heading3">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">When can I label my invention as ‘patent pending’?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
+							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">نقض کپی رایت چیست؟<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
 						</div>
 						<div id="collapse3" class="collapse" aria-labelledby="headingThree">
 							<div class="accordion-body">
-								 <p class="">You may label your unique invention with ‘patent pending’ as soon as you officially submit your patent application. This is an advisable move, as it serves as public notice for potential infringers.</p>
+								 <p class="">نقض کپی رایت یعنی استفاده از اثری که کپی رایت دارد بدون اجازه صاحب آن. شما تا زمانی که به طور رسمی مالک کپی رایت نشوید، نمی‌توانید از قانون برای متوقف کردن افراد از استفاده بدون اجازه از اثر خود استفاده کنید. برای تحت پیگرد قرار دادن متخلفان، باید مالک کپی رایت باشید.
+									</p>
 							</div>
 						</div>
 					</div>
@@ -357,85 +192,9 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 
 
 					<!--===================== Accordion Content ========================-->
-					<div class="accordion-content animated bounceInUp delay-500" style="background: #f2f2f2">
-						<div class="accordion-header" id="heading4">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">What is Patent Search and why is it important?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
-						</div>
-						<div id="collapse4" class="collapse" aria-labelledby="headingFour">
-							<div class="accordion-body">
-								 <p class="">A patent search confirms if your invention is indeed unique and aids in guaranteeing the chances of your invention’s patentability.</p>
-							</div>
-						</div>
-					</div>
+			
 					<!--===================== End of Accordion Content ========================-->
 
-
-
-					<!--===================== Accordion Content ========================-->
-					<div class="accordion-content animated bounceInUp delay-500" style="background: #eef0f2">
-						<div class="accordion-header" id="heading5">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">What is a Patent Draft?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
-						</div>
-						<div id="collapse5" class="collapse" aria-labelledby="headingFive">
-							<div class="accordion-body">
-								 <p class="">A patent draft is the core of your patent application. It is the process of documenting and describing your patent’s specific technical functionalities.</p>
-							</div>
-						</div>
-					</div>
-					<!--===================== End of Accordion Content ========================-->
-
-						<!--===================== Accordion Content ========================-->
-					<div class="accordion-content animated bounceInUp delay-500" style="background: #f2f2f2">
-						<div class="accordion-header" id="heading6">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">What are Patent Annuities?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
-						</div>
-						<div id="collapse6" class="collapse" aria-labelledby="headingSix">
-							<div class="accordion-body">
-								 <p class="">Patent annuities are annual fees that are paid to your local patent office, once you are granted a patent . They are also known as patent renewal or maintenance fees.</p>
-							</div>
-						</div>
-					</div>
-					<!--===================== End of Accordion Content ========================-->
-					
-							<!--===================== Accordion Content ========================-->
-					<div class="accordion-content animated bounceInUp delay-500" style="background:#eef0f2">
-						<div class="accordion-header" id="heading6">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">What happens if I don’t settle my Patent annuity fees?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
-						</div>
-						<div id="collapse6" class="collapse" aria-labelledby="headingSix">
-							<div class="accordion-body">
-								 <p class="">Failure to pay annuities before the predetermined deadline will revoke your ability to enjoy the rights accruable from the Patent protection.</p>
-							</div>
-						</div>
-					</div>
-					<!--===================== End of Accordion Content ========================-->
-
-
-
-					<!--===================== Accordion Content ========================-->
-					<div class="accordion-content animated bounceInUp delay-500" style="background:#f2f2f2">
-						<div class="accordion-header" id="heading7">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">What are Patent or Utility Model Recordals?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
-						</div>
-						<div id="collapse7" class="collapse" aria-labelledby="headingSeven">
-							<div class="accordion-body">
-								 <p class="">Patent recordals refer to an official record of all amendments made to your application such as change of ownership, changes in name and/or address of owner or license availability.</p>
-							</div>
-						</div>
-					</div>
-					<!--===================== End of Accordion Content ========================-->
-
-					<!--===================== Accordion Content ========================-->
-					<div class="accordion-content animated bounceInUp delay-500" style="background: #eef0f2">
-						<div class="accordion-header" id="heading8">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">What is Patent Infringement?<svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">.st0{fill:transparent;}</style><g><circle class="st0" cx="49" cy="49" r="39"/><path d="M49,11c21,0,38,17,38,38S70,87,49,87S11,70,11,49S28,11,49,11 M49,9C26.9,9,9,26.9,9,49s17.9,40,40,40s40-17.9,40-40S71.1,9,49,9L49,9z"/></g><g><rect x="48.5" y="23.5" class="st0" width="1" height="47"/><path d="M49,24v46V24 M50,23h-2v48h2V23L50,23z"/></g><g><rect x="41.5" y="53.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.9533 48.4436)" class="st0" width="1" height="20.7"/><polygon points="35.1,55.6 33.6,57.1 48.9,72.4 50.4,70.9 35.1,55.6 "/></g><g><rect x="45.7" y="63.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8528 58.3431)" class="st0" width="20.7" height="1"/><polygon points="62.9,55.6 47.6,70.9 49.1,72.4 64.4,57.1 62.9,55.6 "/></g></svg></button>
-						</div>
-						<div id="collapse8" class="collapse" aria-labelledby="headingEight">
-							<div class="accordion-body">
-								 <p class="">Patent infringement refers to the <strong>unauthorised use of a patented invention, product or object.</strong></p>
-							</div>
-						</div>
-					</div>
 					<!--===================== End of Accordion Content ========================-->
 				
 					<!--===================== End of Accordion Content ========================-->
@@ -445,91 +204,7 @@ through our smart firm<br class="d-none d-xl-block"> online patent registration.
 			</div>
 
 
-			<div class="container">
-				<div class="clearfix"></div>
-				<br>
-				<br>
-				<div class="text-head text-center" style="margin-bottom: 50px">
-					<h5>Questions</h5>
-					<h2 class="h2-main">Cannot find what you are looking for?</h2>
-				</div>
-
-				 <div class="row">
-
-
-			<div id="request" class="col-xl-12 col-lg-12 col-md-12 col-12 animated bounceInTop position-relative" style="padding-bottom: 35px;">
-                     <div class="questionBlock"></div>
-					<form class="message-form" action="" id="questionform" style="">
-
-						<div class="text-left">
-					<h4 style="margin-top: -7px">Ask us anything</h4>
-					
-					<article style="margin-top: 0px;margin-bottom: 15px;">
-							
-							<p style="margin-bottom: 0px;margin-top: 10px;line-height: 20px;">Our UAE-based experts are available<br class="d-none d-lg-block">Monday to Friday, from 10 AM to 7 PM.</p>
-							
-						</article>
-					</div>
-					<input type="hidden" name="_token" value="ggHe4RuSj4NkfntkzxfcqxExrlQPqtNGOhXtdy81">
-					<input type="hidden" name="service" value="patent">
-                    <div class="row">
-						<div class="form-group col-md-6">
-							
-							<input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Name">
-						</div>
-						
-						<div class="form-group col-md-6">
-							
-							<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address (required)">
-						</div>
-					</div>
-					
-						<div class="row">
-					
-					
-						<div class="form-group col-md-12">
-							
-							<div class="clearfix"></div><br>
-							<select name="country[]" class="form-control country" multiple="true">
-								<option></option>
-                                                                <option value="Algeria">Algeria</option>
-                                                                <option value="Bahrain">Bahrain</option>
-                                                                <option value="Egypt">Egypt</option>
-                                                                <option value="Jordan">Jordan</option>
-                                                                <option value="Kuwait">Kuwait</option>
-                                                                <option value="Lebanon">Lebanon</option>
-                                                                <option value="Morocco">Morocco</option>
-                                                                <option value="Oman">Oman</option>
-                                                                <option value="Qatar">Qatar</option>
-                                                                <option value="Saudi Arabia">Saudi Arabia</option>
-                                                                <option value="Tunisia">Tunisia</option>
-                                                                <option value="Turkey">Turkey</option>
-                                                                <option value="United Arab Emirates">United Arab Emirates</option>
-                                                                <option value="Other">Other</option>
-                                							</select>
-						</div>
-					</div>
-
-						<div class="form-group last">
-						<input type="text" id="website" name="website" style="display: none;" />
-						<input type="text" id="contacttr" name="contacttr" style="display: none;" />
-						<textarea name="question" class="form-control" placeholder="Message"></textarea>
-            
-						</div>
-
-					
-						
-						<div class="text-left">
-						     <div class="g-recaptcha" data-sitekey="6LfjFyQhAAAAACGmE2C4mD9AEPoNgSztsoICUFg6"></div>
-						     <br/>
-							<button type="submit" id="blue-brd-btn-service" class="blue-brd-btn">Submit</button>
-						</div>
-					</form>
-				</div>
-
-			</div>
-	            <!-- end row -->
-			</div>
+		
 
 
 
