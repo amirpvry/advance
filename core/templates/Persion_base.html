@@ -265,18 +265,19 @@ padding: 32px 32px;
     }
 }
 @font-face {
-    font-family: 'BNazanin';
-
-    src:     url('/static/fonts/B-Nazanin.ttf') format('truetype'); /* Safari, Android, iOS */
-    font-weight: normal;
-    font-style: normal;
+            font-family: 'B-Nazanin';
+            src: url("{% static 'fonts/B-Nazanin.ttf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
 }
 
 body {
-    font-family: 'BNazanin', 'Tahoma', 'Arial', sans-serif;
+    font-family: 'B-Nazanin', sans-serif;
     direction: rtl;
     text-align: right;
+    
 }
+
 
 header, footer {
     background-color: #ffffff;
