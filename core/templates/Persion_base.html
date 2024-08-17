@@ -474,14 +474,14 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 
 	<li class="serviceli"><a href="{% url 'main:trade_fa' %}"><span>Trademark Services</span></a></li>
 		
-			<li class="serviceli"><a href="{% url 'main:online-service' %}"><span>Online Protection Services</span></a></li>
+			<li class="serviceli"><a href="{% url 'main:online-service_fa' %}"><span>Online Protection Services</span></a></li>
 
 
 	</ul>
 
 	<ul>
-	    	<li class="serviceli"><a href="{%  url 'main:patent' %}"><span>Patent Services</span></a></li>
-	    		<li class="serviceli"><a href="{%  url 'main:copyright' %}"><span>Copyrights</span></a></li>
+	    	<li class="serviceli"><a href="{%  url 'main:patent_fa' %}"><span>Patent Services</span></a></li>
+	    		<li class="serviceli"><a href="{%  url 'main:copyright_fa' %}"><span>Copyrights</span></a></li>
         
         	<li class="serviceli"><a href="{%  url 'main:translation' %}"><span>Translation Services</span></a></li>
 	       
@@ -489,10 +489,10 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 	</ul>
 
 	<ul>
-	<li class="serviceli"><a href="{%  url 'main:design' %}" 
+	<li class="serviceli"><a href="{%  url 'main:design_fa' %}" 
 	 ><span> Industrial Design and Utility Model Services</span></a></li>
 
-		<li class="serviceli"><a href="{%  url 'main:ip-server' %}"><span>IP Services</span></a></li>
+		<li class="serviceli"><a href="{%  url 'main:ip-server_fa' %}"><span>IP Services</span></a></li>
 
 	</ul>
 
@@ -507,29 +507,31 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							<li class="list-inline-item"><a href="{%  url 'blog:blog-posting' %}">بلاگ<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 
 							<li class="list-inline-item"><a href="{%  url 'main:contact_us_fa' %}">ارتباط با ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+                            <li class="list-inline-item">
+                            {% if lang == 'en' %}
+                            <div>
+                                <a href="{{ path }}">انگلیسی</a> | 
+                                <a href="/fa{{ path }}">فارسی</a>
+                            </div>
+                        {% elif lang == 'fa' %}
+                            <div>
+                                <a href="/en{{ path }}">انگلیسی</a> | 
+                                <a href="{{ path }}">فارسی</a>
+                            </div>
+                        {% else %}
+                            <div>
+                                <a href="/en{{ path }}">انگلیسی</a> | 
+                                <a href="/fa{{ path }}">فارسی</a>
+                            </div>
+                        {% endif %}
+                        </div>
+                        <button class="mobile-btn">
+                            <span></span>
+                        </button></li>
 
 						</ul>
                         
-                        {% if lang == 'en' %}
-                        <div>
-                            <a href="{{ path }}">English</a> | 
-                            <a href="/fa{{ path }}">Persian</a>
-                        </div>
-                    {% elif lang == 'fa' %}
-                        <div>
-                            <a href="/en{{ path }}">English</a> | 
-                            <a href="{{ path }}">Persian</a>
-                        </div>
-                    {% else %}
-                        <div>
-                            <a href="/en{{ path }}">English</a> | 
-                            <a href="/fa{{ path }}">Persian</a>
-                        </div>
-                    {% endif %}
-					</div>
-					<button class="mobile-btn">
-						<span></span>
-					</button>
+
 					<!--===================== End of Header Block ========================-->
 				</div>
 			</div>
@@ -548,16 +550,16 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                 <div class="row footer-menu-wrap">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                         <div class="logo">
-                            <a href="https://abounaja.com"><img src="https://abounaja.com/assets/img/logo_footer.png?v=4" alt="images"></a>
-                            <p>ABOU NAJA Intellectual Property is a global leader in IP laws based in the UAE. Our decades of continued success across the MENA region are fueled by our commitment to protect creations of the human genius.</p>
+                            <a href="{% url 'main:homepage_fa'  %}"><img src="{% static 'assets/img/Picture1.png' %}" alt="images"></a>
+                            <p></p>
                             <br>
-                            <div><a target="_blank" href="https://www.goodfirms.co/company/abou-naja-intellectual-property"><img style="width:180px" src="https://assets.goodfirms.co/badges/blue-button/law-firms.svg" title=" Company" alt=" Company"></a></div>
+                            
     
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-6 col-12">
                         <div class="inside-column">
-                            <h4 class="title">The Firm</h4>
+                            <h4 class="title">شرکت</h4>
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'main:homepage_fa'  %}">خانه</a></li>
                                 <li><a href="{% url 'main:about_us_fa' %}">درباره ما</a></li>
@@ -571,7 +573,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                     </div>
                     <div class="col-xl-3 col-lg-2 col-md-6 col-12">
                         <div class="inside">
-                            <h4 class="title">Support</h4>
+                            <h4 class="title">پشتیبانی</h4>
                             <ul class="list-unstyled">
                 
                                 <li><a href="{%  url 'main:contact_us_fa' %}">ارتباط با ما</a></li>
@@ -580,13 +582,14 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                         </div>
                     </div>
                      <div class="col-xl-2 col-lg-3 col-md-6 col-12 contact-xl-last">
-                        <h4 class="title">Contact</h4>
+                        <h4 class="title">راه های ارتباطی</h4>
                         <ul class="list-unstyled">	 
-                                                <li><a href="https://g.page/AbouNajaIP?share">Al Huda Building, 101,</a></li>
+                            آدرس: تهران، خیابان میرداماد، خیابان مصدق جنوبی، کوچه تابان، پلاک 10، واحد 14                                                <!-- <li><a href="https://g.page/AbouNajaIP?share">Al Huda Building, 101,</a></li>
                             <li><a href="https://g.page/AbouNajaIP?share">55 Street, Garhoud, Dubai</a></li>
                             <li><a href="https://g.page/AbouNajaIP?share">United Arab Emirates</a></li>
-                            <li><a href="/cdn-cgi/l/email-protection#d7b4b8b9b9b2b4a397b6b5b8a2b9b6bdb6f9b4b8ba"><span class="__cf_email__" data-cfemail="492a2627272c2a3d09282b263c27282328672a2624">[email&#160;protected]</span></a></li>
-                            <li><a href="tel:+97142822677">+971 4 282 2677</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#d7b4b8b9b9b2b4a397b6b5b8a2b9b6bdb6f9b4b8ba"><span class="__cf_email__" data-cfemail="492a2627272c2a3d09282b263c27282328672a2624">[email&#160;protected]</span></a></li> -->
+                            <li><a href="tel:+989211383775" class="small-text">Mobile: +98(912)138 37 75  </a></li>
+                            <li><a href="tel:+982122271571" class="small-text">Telephone: +98(21)222 71 571  </a></li>
                         </ul>
                     </div>
                     

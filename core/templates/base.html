@@ -43,6 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .registration_quote{
         	font-size: 1.8em !important;
         }
+        
         .text,.overview-pricing-cta p{
         	text-align: center !important;
         	padding-left: none !important;
@@ -235,8 +236,14 @@ padding: 32px 32px;
 	/*box-shadow: 3px 3px 0 lightgrey, 0 -5px 2px -5px lightgrey, -5px 0 1px -5px lightgrey;*/
 	    box-shadow: 2px 2px 5px lightgrey, 0 -5px 2px -5px lightgrey, -5px 0 1px -5px lightgrey;
 
-	    background-color: #fff;
+	    background-color: #9b871444;
 
+}
+.boxes .reviews-img-wrap img {
+    background-color: transparent; /* شفاف‌سازی پس‌زمینه تصاویر آیکون */
+    border-radius: 50%; /* (اختیاری) اگر می‌خواهید تصاویر دایره‌ای شوند */
+    padding: 5px; /* (اختیاری) برای ایجاد فاصله بین تصویر و مرز کارت */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* (اختیاری) افزودن سایه به تصویر برای برجسته‌سازی */
 }
 
 .boxes .review-text{
@@ -277,7 +284,23 @@ body {
     
     
 }
-    
+.logo {
+    background-color: transparent; /* شفاف‌سازی پس‌زمینه */
+    border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+    padding: 5px; /* فاصله بین تصویر و مرز */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* سایه دادن به تصویر */
+    transition: transform 0.3s ease-in-out; /* انیمیشن برای تغییر حالت */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* بزرگ‌نمایی تصویر هنگام هاور */
+}
+.img_991 img {
+    display: block;
+    margin: 0 auto; /* وسط‌چین کردن تصویر */
+    max-width: 80%; /* تعیین حداکثر عرض تصویر */
+    border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+}
 	</style>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -379,7 +402,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 
 }
 .reason-block-cont {
-      background-color: #007BFF; /* رنگ آبی */
+      background-color: #cda352; /* رنگ آبی */
       padding: 20px; /* فاصله داخلی */
       border-radius: 8px; /* گوشه‌های گرد */
       color: white; /* رنگ متن سفید */
@@ -475,27 +498,31 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							<li class="list-inline-item"><a href="{%  url 'blog:blog-posting' %}">Blog<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 
 							<li class="list-inline-item"><a href="{%  url 'main:contact_us' %}">Contact Us<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
-
+                            <li class="list-inline-item">
+                                {% if lang == 'en' %}
+                                <div>
+                                    <a href="{{ path }}">English</a> | 
+                                    <a href="/fa{{ path }}">Persian</a>
+                                </div>
+                            {% elif lang == 'fa' %}
+                                <div>
+                                    <a href="/en{{ path }}">English</a> | 
+                                    <a href="{{ path }}">Persian</a>
+                                </div>
+                            {% else %}
+                                <div>
+                                    <a href="/en{{ path }}">English</a> | 
+                                    <a href="/fa{{ path }}">Persian</a>
+                                </div>
+                            {% endif %}
+                            </div>
+                            <button class="mobile-btn">
+                                <span></span>
+                            </button></li>
 						</ul>
                         
-                        {% if lang == 'en' %}
-                        <div>
-                            <a href="{{ path }}">English</a> | 
-                            <a href="/fa{{ path }}">Persian</a>
-                        </div>
-                    {% elif lang == 'fa' %}
-                        <div>
-                            <a href="/en{{ path }}">English</a> | 
-                            <a href="{{ path }}">Persian</a>
-                        </div>
-                    {% else %}
-                        <div>
-                            <a href="/en{{ path }}">English</a> | 
-                            <a href="/fa{{ path }}">Persian</a>
-                        </div>
-                    {% endif %}
-					</div>
-					<button class="mobile-btn">
+                        
+			
 						<span></span>
 					</button>
 					<!--===================== End of Header Block ========================-->
@@ -516,7 +543,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                 <div class="row footer-menu-wrap">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                         <div class="logo">
-                            <a href="{% url 'main:homepage'  %}"><img src="{% static 'assets/img/Picture1.png' %}" alt="images"></a>
+                            <a href="{% url 'main:homepage'  %}"><img src="{% static 'assets/img/Picture2.png' %}" alt="images"></a>
                             <p></p>
                             <br>
                             
