@@ -466,69 +466,26 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
         .whatsapp-button:hover .tooltip {
             display: block; /* نمایش پیام در هنگام هاور */
         }
-        /* تنظیمات پایه برای تمامی اندازه‌های صفحه */
-body {
-  font-size: 16px; /* اندازه فونت پایه */
-  line-height: 1.5; /* فاصله خطوط */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  max-width: 1200px;
+        .responsive-img {
+  width: 100%;  /* تصویر همیشه 100% عرض ستون را می‌گیرد */
+  height: 130%;  /* ارتفاع تصویر به طور خودکار تنظیم می‌شود */
+  display: block;
   margin: 0 auto;
 }
 
-/* تنظیمات واکنش‌گرا */
-@media (max-width: 1200px) {
-  body {
-    font-size: 15px;
-  }
-  .container {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 992px) {
-  body {
-    font-size: 14px;
-  }
-  .container {
-    padding: 0.5rem;
-  }
-}
-
 @media (max-width: 768px) {
-  body {
-    font-size: 13px;
-  }
-  .container {
-    padding: 0.5rem;
+  .responsive-img {
+    width: 100%; /* برای موبایل تصویر به صورت کامل عرض ستون را بپوشاند */
   }
 }
 
 @media (max-width: 576px) {
-  body {
-    font-size: 12px;
-  }
-  .container {
-    padding: 0.5rem;
+  .col-lg-5 {
+    width: 100%; /* ستون کامل را پر می‌کند در موبایل */
+    text-align: center; /* تصویر در مرکز قرار می‌گیرد */
   }
 }
 
-@media (max-width: 360px) {
-  body {
-    font-size: 11px;
-  }
-  .container {
-    padding: 0.5rem;
-  }
-}
 
 </style>
 <span class="arowmake"></span>
