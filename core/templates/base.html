@@ -401,6 +401,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 
 
 }
+
 .reason-block-cont {
       background-color: #cda352; /* رنگ آبی */
       padding: 20px; /* فاصله داخلی */
@@ -419,6 +420,13 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
     .reasons-desc-div p {
       color: white; /* اطمینان از اینکه متن داخل کادر سفید باشد */
     }
+    @media (max-width: 768px) {
+  .reason-block-cont {
+    height: auto; /* ارتفاع به صورت خودکار تنظیم می‌شود */
+    padding: 15px; /* کاهش فاصله داخلی برای موبایل */
+    margin-bottom: 15px; /* کاهش فاصله پایین */
+  }
+}
             /* استایل برای دکمه واتساپ */
             .whatsapp-button {
             position: fixed;
