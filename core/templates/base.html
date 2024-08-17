@@ -466,6 +466,70 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
         .whatsapp-button:hover .tooltip {
             display: block; /* نمایش پیام در هنگام هاور */
         }
+        /* تنظیمات پایه برای تمامی اندازه‌های صفحه */
+body {
+  font-size: 16px; /* اندازه فونت پایه */
+  line-height: 1.5; /* فاصله خطوط */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* تنظیمات واکنش‌گرا */
+@media (max-width: 1200px) {
+  body {
+    font-size: 15px;
+  }
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 11px;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+}
+
 </style>
 <span class="arowmake"></span>
 <div class="container-fluid wedomenu" id="wedomenu">
