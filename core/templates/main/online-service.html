@@ -12,7 +12,7 @@
 							<div class="text" style="padding-top: 0px;max-width: 600px">
 						
 						<div class="">
-							<ul class="breadcrumbs d-none d-md-block"><li><a href="https://abounaja.com">Home</a> ▸</li><li><a href="https://abounaja.com/services">Practice Areas</a> ▸</li><li><a href="https://abounaja.com/services/patent" title="Patent">Patent</a></li></ul>
+							<ul class="breadcrumbs d-none d-md-block"><li><a href="{% url  'main:homepage' %}">Home</a> ▸</li><li><a href="{% url  'main:services' %}">services</a> ▸</li><li><a href="{% url  'main:online-service' %}" title="Patent">online-service </a></li></ul>
 
 							<p class="product-title" itemprop="name"> Online Protection Services</p>
 
@@ -56,42 +56,7 @@
 				</div>
 	</div>
 	<!--===================== End of First Section ========================-->
-	<div class="reviews-wrapper animatedParent" style="display: none;">
-		<div class="container">
-			<div class="row">
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-250">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Lora Michel</h4>
-						<p class="text-uppercase">Patel Psych</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-500">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Nina Rich</h4>
-						<p class="text-uppercase">Panax Pharma</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-				<div class="reviews-item col-xl-4 col-md-4 col-sm-12 animated bounceInLeft delay-750">
-					<div class="reviews-inside">
-						<div class="reviews-img-wrap">
-							<img src="https://abounaja.com/assets/img/review-img1.png" alt="images">
-						</div>
-						<h4>Robert Patinson</h4>
-						<p>HoolaHire</p>
-						<p class="review-text">Absolutely wonderful! I am completelyblown away. The very best. I was amazed at the quality.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 
 
@@ -105,7 +70,7 @@
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
 						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/IP_Portfolio_Management/IP_Portfolio_Management.png' %}" alt="images"  width='101' height='101'>  
+							<img src="{% static 'assets/img/ServicesIcons/Online_Protection_Services/salam.png' %}" alt="images"  width='60' height='60'>  
 						</div>
 						 <div class="leftalign">
 						    <h4>Online Monitoring Services</h4>
@@ -120,7 +85,7 @@
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
 						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/IP_Portfolio_Management/IP_Valuation.png'%}" alt="images"  width='101' height='101'>  
+							<img src="{% static 'assets/img/ServicesIcons/Online_Protection_Services/download.png'%}" alt="images"  width='60' height='60'>  
 						</div>
 						
 						<div class="leftalign">
@@ -140,7 +105,7 @@
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
 						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/IP_Portfolio_Management/Audit.png' %}" alt="images"  width='101' height='101'>  
+							<img src="{% static 'assets/img/ServicesIcons/Online_Protection_Services/download (2).png' %}" alt="images"  width='60' height='60'>  
 						</div>
 						
 						
@@ -157,7 +122,7 @@
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
 						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/IP_Portfolio_Management/Licensing_franchising.png' %}" alt="images"  width='101' height='101'>  
+							<img src="{% static 'assets/img/ServicesIcons/Online_Protection_Services/hello.png' %}" alt="images"  width='60' height='60'>  
 						</div>
 						
 							<div class="leftalign">
@@ -176,7 +141,7 @@
 					<!-- start -->
 					<div class="reviews-inside" style="padding: 23px;border-radius: 10px">
 						<div class="reviews-img-wrap">
-							<img src="{% static 'assets/img/ServicesIcons/IP_Portfolio_Management/Due_Diligence.png' %}" alt="images"  width='101' height='101'>  
+							<img src="{% static 'assets/img/ServicesIcons/Online_Protection_Services/download (8).png' %}" alt="images"  width='60' height='60'>  
 						</div>
 							<div class="leftalign">
 						    <h4>Online Common Law Search</h4>
@@ -220,92 +185,7 @@
 			</div>
 
 
-			<div class="container">
-				<div class="clearfix"></div>
-				<br>
-				<br>
-				<div class="text-head text-center" style="margin-bottom: 50px">
-					<h5>Questions</h5>
-					<h2 class="h2-main">Cannot find what you are looking for?</h2>
-				</div>
-
-				 <div class="row">
-
-
-			<div id="request" class="col-xl-12 col-lg-12 col-md-12 col-12 animated bounceInTop position-relative" style="padding-bottom: 35px;">
-                     <div class="questionBlock"></div>
-					<form class="message-form" action="" id="questionform" style="">
-
-						<div class="text-left">
-					<h4 style="margin-top: -7px">Ask us anything</h4>
-					
-					<article style="margin-top: 0px;margin-bottom: 15px;">
-							
-							<p style="margin-bottom: 0px;margin-top: 10px;line-height: 20px;">Our UAE-based experts are available<br class="d-none d-lg-block">Monday to Friday, from 10 AM to 7 PM.</p>
-							
-						</article>
-					</div>
-					<input type="hidden" name="_token" value="ggHe4RuSj4NkfntkzxfcqxExrlQPqtNGOhXtdy81">
-					<input type="hidden" name="service" value="patent">
-                    <div class="row">
-						<div class="form-group col-md-6">
-							
-							<input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Name">
-						</div>
-						
-						<div class="form-group col-md-6">
-							
-							<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address (required)">
-						</div>
-					</div>
-					
-						<div class="row">
-					
-					
-						<div class="form-group col-md-12">
-							
-							<div class="clearfix"></div><br>
-							<select name="country[]" class="form-control country" multiple="true">
-								<option></option>
-                                                                <option value="Algeria">Algeria</option>
-                                                                <option value="Bahrain">Bahrain</option>
-                                                                <option value="Egypt">Egypt</option>
-                                                                <option value="Jordan">Jordan</option>
-                                                                <option value="Kuwait">Kuwait</option>
-                                                                <option value="Lebanon">Lebanon</option>
-                                                                <option value="Morocco">Morocco</option>
-                                                                <option value="Oman">Oman</option>
-                                                                <option value="Qatar">Qatar</option>
-                                                                <option value="Saudi Arabia">Saudi Arabia</option>
-                                                                <option value="Tunisia">Tunisia</option>
-                                                                <option value="Turkey">Turkey</option>
-                                                                <option value="United Arab Emirates">United Arab Emirates</option>
-                                                                <option value="Other">Other</option>
-                                							</select>
-						</div>
-					</div>
-
-						<div class="form-group last">
-						<input type="text" id="website" name="website" style="display: none;" />
-						<input type="text" id="contacttr" name="contacttr" style="display: none;" />
-						<textarea name="question" class="form-control" placeholder="Message"></textarea>
-            
-						</div>
-
-					
-						
-						<div class="text-left">
-						     <div class="g-recaptcha" data-sitekey="6LfjFyQhAAAAACGmE2C4mD9AEPoNgSztsoICUFg6"></div>
-						     <br/>
-							<button type="submit" id="blue-brd-btn-service" class="blue-brd-btn">Submit</button>
-						</div>
-					</form>
-				</div>
-
-			</div>
-	            <!-- end row -->
-			</div>
-
+		
 
 
 
