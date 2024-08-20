@@ -301,6 +301,9 @@ body {
     max-width: 80%; /* تعیین حداکثر عرض تصویر */
     border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
 }
+.product-title {
+    color: black !important;
+}
 	</style>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -524,7 +527,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							
 							
 		
-							<li class="list-inline-item"><a href="{%  url 'blog:blog-posting' %}">Blog<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+							<li class="list-inline-item"><a href="{%  url 'blog:blog-soon' %}">Blog<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 
 							<li class="list-inline-item"><a href="{%  url 'main:contact_us' %}">Contact Us<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
                             <li class="list-inline-item">
@@ -588,7 +591,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                                 <li><a href="{% url 'main:services' %}">Our Services</a></li>						
                                 
                                 
-                                <li><a href="{%  url 'blog:blog-posting' %}">Blog</a></li>
+                                <li><a href="{%  url 'blog:blog-soon' %}">Blog</a></li>
                                 
                             </ul>
                         </div>
