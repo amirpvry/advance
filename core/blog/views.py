@@ -81,8 +81,12 @@ def blog_posting(request):
         status=True
     )  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
     return render(request, "blog/blog-posting.html", {"posts": posts})
+
+
 def blog_soon(request):
     return render(request, "blog/blog-soon.html")
+
+
 def fa_blog_soon(request):
     return render(request, "blog/fa_blog-soon.html")
 
