@@ -34,6 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<!-- Responsive Theme -->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet" type="text/css" />
 	<!-- Style Straight Theme -->
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style-straight.css' %}">
 	
@@ -272,20 +273,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            padding-left:0px !important;
        }
    }
-   @font-face {
-               font-family: 'B-NAZANIN';
-               src: url("{% static 'fonts/B-NAZANIN.ttf' %}") format('truetype');
+   /* @font-face {
+               font-family: 'B-NAZANIN'  !important ;
+               src: url("{% static 'fonts/B-NAZANIN.TTF' %}") format('truetype') !important;
                font-weight: normal;
                font-style: normal;
             
    }
    
    body {
-       font-family: 'B-NAZANIN', sans-serif;
+       font-family: 'B-NAZANIN', sans-serif !important;
        direction: rtl;
        text-align: right;
        
-   }
+   } */
+
+
+   body {
+        font-family: 'Vazir', sans-serif;
+        direction: rtl;
+        text-align: right;
+    }
    .logo {
        background-color: transparent; /* شفاف‌سازی پس‌زمینه */
        border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
@@ -306,6 +314,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .product-title {
     color: black !important;
 }
+.ltr-phone {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
 
        </style>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -616,8 +629,11 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                             <li><a href="https://g.page/AbouNajaIP?share">55 Street, Garhoud, Dubai</a></li>
                             <li><a href="https://g.page/AbouNajaIP?share">United Arab Emirates</a></li>
                             <li><a href="/cdn-cgi/l/email-protection#d7b4b8b9b9b2b4a397b6b5b8a2b9b6bdb6f9b4b8ba"><span class="__cf_email__" data-cfemail="492a2627272c2a3d09282b263c27282328672a2624">[email&#160;protected]</span></a></li> -->
-                            <li><a href="tel:+989211383775" class="small-text"><strong>موبایل</strong>&#8204; +98(912)138 37 75 </a></li>
-                            <li><a href="tel:+982122271571" class="small-text"><strong>تلفن</strong>&#x200F; +98(21)222 71 571  </a></li>
+                            <li><a href="tel:+989211383775" class="small-text"><strong>موبایل</strong></a></li>
+                            <li><a href="tel:+982122271571" class="small-text ltr-phone">+98(912)138 37 75 </a></li>
+                            <li><a href="tel:+982122271571" class="small-text"><strong>تلفن</strong> </a></li>
+                            <li><a href="tel:+982122271571" class="small-text ltr-phone">+98(21)222 71 571</a></li>
+
                         </ul>
                     </div>
                     
