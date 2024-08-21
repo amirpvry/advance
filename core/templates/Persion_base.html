@@ -28,13 +28,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<!-- Animation -->
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/animations.min.css' %}">
 	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700,700i,800,900&font-display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700,700i,800,900&font-display=swap" rel="stylesheet"> -->
 	<!-- Style Theme -->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
 	<!-- Responsive Theme -->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://gitcdn.ir/library/PersianFonts/BNazanin/style.css" rel="stylesheet" type="text/css" />
 	<!-- Style Straight Theme -->
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style-straight.css' %}">
 	
@@ -290,10 +290,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
    body {
-        font-family: 'Vazir', sans-serif;
-        direction: rtl;
-        text-align: right;
-    }
+    font-family: 'BNazanin', sans-serif;
+    direction: rtl;
+    text-align: right;
+    font-size: 16px; /* تنظیم اندازه فونت */
+    font-weight: 400; /* ضخامت فونت نرمال */
+}
+
+
+.wedomenu ul li.serviceli a span {
+    font-size: 18px; /* تنظیم اندازه فونت دلخواه */
+    font-weight: 500; /* تنظیم ضخامت فونت */
+}
+.list-inline-item a {
+    font-size: 20px !important; /* تنظیم اندازه فونت */
+    font-weight: 600 !important; /* تنظیم ضخامت فونت */
+}
+.reviews-inside h4 {
+    font-size: 23px!important; /* تنظیم اندازه فونت */
+    font-weight: bold!important; /* تنظیم ضخامت فونت به صورت ضخیم */
+}
+.row.align-items-center p {
+    font-size: 20px!important; /* اندازه فونت را به دلخواه تغییر دهید */
+}
+.review-text.leftalign {
+    font-size: 20px!important; /* اندازه فونت را به دلخواه تغییر دهید */
+}
+
+
+
+
    .logo {
        background-color: transparent; /* شفاف‌سازی پس‌زمینه */
        border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
