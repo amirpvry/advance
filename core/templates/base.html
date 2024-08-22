@@ -304,25 +304,56 @@ body {
 .product-title {
     color: black !important;
 }
-    /* استایل‌های مخصوص دسکتاپ */
-    @media (min-width: 768px) {
-        .img_991 img {
-            width: 760px; /* عرض ثابت برای دسکتاپ */
-            height: 100%; /* حفظ ارتفاع تصویر */
-        }
+.c-container {
+    position: relative;
+    background-color: #b9a372 !important;
+    height: 600px;
+}
+
+.text-section {
+    color: #080808;
+}
+
+.text-section h3 {
+    font-size: 2rem; /* سایز هدر */
+}
+
+.text-section p {
+    color: #0a0a0a;
+    font-size: 1rem; /* سایز پاراگراف */
+}
+
+.img_991 picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    max-width: none;
+}
+
+@media (max-width: 767px) {
+    .c-container {
+        height: 300px; /* ارتفاع در موبایل کاهش می‌یابد */
+    }
+    
+    .text-section h3 {
+        font-size: 1.5rem; /* کاهش سایز هدر در موبایل */
     }
 
-    /* استایل‌های مخصوص موبایل */
-    @media (max-width: 767px) {
-        .c-container {
-            height: auto; /* ارتفاع خودکار برای موبایل */
-        }
-        .img_991 img {
-            width: 100%; /* تصویر به صورت کامل در کادر */
-            height: auto; /* حفظ نسبت ابعاد در موبایل */
-            object-fit: cover; /* برش تصویر به صورت مناسب */
-        }
+    .text-section p {
+        font-size: 0.875rem; /* کاهش سایز پاراگراف در موبایل */
     }
+
+    .img_991 {
+        height: 100%;
+    }
+
+    .img_991 picture img {
+        height: 100%;
+        object-fit: cover; /* اطمینان از نمایش کامل عکس در کادر */
+    }
+}
+
 	</style>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
