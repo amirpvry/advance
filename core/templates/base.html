@@ -304,13 +304,23 @@ body {
 .product-title {
     color: black !important;
 }
-@media (max-width: 767px) {
+    /* استایل‌های مخصوص دسکتاپ */
+    @media (min-width: 768px) {
+        .img_991 img {
+            width: 760px; /* عرض ثابت برای دسکتاپ */
+            height: 100%; /* حفظ ارتفاع تصویر */
+        }
+    }
+
+    /* استایل‌های مخصوص موبایل */
+    @media (max-width: 767px) {
         .c-container {
-            height: auto;
+            height: auto; /* ارتفاع خودکار برای موبایل */
         }
         .img_991 img {
-            height: auto;
-            max-height: 400px; /* یا هر مقداری که مناسب است */
+            width: 100%; /* تصویر به صورت کامل در کادر */
+            height: auto; /* حفظ نسبت ابعاد در موبایل */
+            object-fit: cover; /* برش تصویر به صورت مناسب */
         }
     }
 	</style>
