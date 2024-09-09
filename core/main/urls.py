@@ -25,6 +25,6 @@ urlpatterns = [
     path("fa/services", fa_services_view, name="services_fa"),
     path("en/about_us", about_us_view, name="about_us"),
     path("fa/about_us", fa_about_us_view, name="about_us_fa"),
-    path("en/contact_us",contact_us_view, name="contact_us"),
-    path("fa/contact_us",fa_contact_us_view, name="contact_us_fa"),
+    path("en/contact_us", contact_us_view, name="contact_us"),
+    path("fa/contact_us", fa_contact_us_view, name="contact_us_fa"),
 ]
