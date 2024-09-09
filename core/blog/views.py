@@ -12,6 +12,8 @@ from django.views.generic.list import ListView
 from .forms import PostForm
 from django.views.generic.edit import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from taggit.models import Tag
 
 
 # Create your views here.
@@ -72,3 +74,24 @@ class PostUpdateView(UpdateView):
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = "/blog/post/"
+
+
+def blog_posting(request):
+    posts = Post.objects.filter(
+        status=True
+    )  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
+    return render(request, "blog/blog-posting.html", {"posts": posts})
+
+
+def blog_soon(request):
+    return render(request, "blog/blog-soon.html")
+
+
+def fa_blog_soon(request):
+    return render(request, "blog/fa_blog-soon.html")
+
+
+def tagged_posts(request, name):
+    tag = Tag.objects.get(name=name)
+    posts = Post.objects.filter(tags=tag)
+    return render(request, "blog/blog-tags.html", {"posts": posts, "tag": tag})

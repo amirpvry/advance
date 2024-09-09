@@ -1,0 +1,67 @@
+{% load static %}
+
+{% for post in Post.object.all %}
+
+<li><a href="https://abounaja.com/blogs/procedural-abstraction-in-ip">{{post.content}}Procedural Abstraction in Intellectual Property</a></li>
+{% endfor %}
+{{Post.content}}
+
+<a><h2>{{object.id}} - {{object}}</h2>
+    <small>{{object.author}} - {{object.publish_date}} - <h1>{{ object.title }}</h1> </small>
+    <h1>blog posts</h1>
+    {% for post in posts %}
+    <i>
+        <a href="{% url 'blog:post-detail' pk=post.id %}">
+            <h2>{{post.id}} - {{post.title}} </h2>
+            <a href="{% url 'blog:post-update' pk=post.id %}">
+            <h2>edit</h2>
+        </a>
+        <a href="{% url 'blog:post-delete' pk=post.id %}">
+            <h2>delete</h2>
+        </a>
+        </a> 
+
+
+    </i>
+
+  
+    <small>{{post.author.first_name}} - {{post.publish_date}}  </small>
+
+    {%endfor%}
+
+
+    <h2>About Us</h2>
+    <p>This is the content of the about page.</p>
+
+    <div class="elementor-element elementor-element-f3adce1 animated-slow elementor-widget elementor-widget-image animated fadeIn" data-id="f3adce1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+                                            <img loading="lazy" decoding="async" width="99" height="96" src="https://garshalaw.com/wp-content/uploads/2023/07/داوری-و-میانجی-گری.svg" class="attachment-large size-large wp-image-132" alt="">													</div>
+        </div>
+        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-b88f4c5" data-id="b88f4c5" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-f3adce1 animated-slow elementor-invisible elementor-widget elementor-widget-image" data-id="f3adce1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img loading="lazy" decoding="async" width="99" height="96" src="https://garshalaw.com/wp-content/uploads/2023/07/داوری-و-میانجی-گری.svg" class="attachment-large size-large wp-image-132" alt="" />													</div>
+				</div>
+				<div class="elementor-element elementor-element-a08435d elementor-widget elementor-widget-text-editor" data-id="a08435d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<h2>خدمات داوری و میانجی‌گری</h2>						</div>
+				</div>
+				<div class="elementor-element elementor-element-68ec587 elementor-widget__width-inherit elementor-widget elementor-widget-text-editor" data-id="68ec587" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>استفاده از شیوه‌های جایگزین دادگاه به منظور حل و فصل اختلافات</p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-4f07790 elementor-align-center elementor-widget elementor-widget-button" data-id="4f07790" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-xs" href="#">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">مطالعه بیشتر</span>
+					</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>

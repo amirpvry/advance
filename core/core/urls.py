@@ -23,6 +23,8 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.http import HttpResponse
+from django.conf.urls.i18n import i18n_patterns
+from django.views.i18n import set_language
 
 
 def testfinal(request):
@@ -44,8 +46,9 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", include("main.urls")),
     path(
-        "blog/",
+        "",
         include("blog.urls"),
     ),
     path("accounts/", include("accounts.urls")),
@@ -65,8 +68,12 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
-    path("", testfinal, name="finaltest"),
 ]
+
+urlpatterns += i18n_patterns(
+    path("change_language/", set_language, name="set_language"),
+    # مسیرهای دیگر
+)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,1243 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56NHRB3');</script>
+<!-- End Google Tag Manager -->
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="{% static 'assets/img/Picture1.png' %}" />
+	<link rel="apple-touch-icon" href="{% static 'assets/img/Picture1.png' %}" />
+	<title>جان نثاری</title>
+	<meta name="description" content="We assist companies in protecting their valuable inventions by ensuring complete and seamless process of Patent Search, Registration, Annuities & Recordals.">
+  <meta name="keywords" content="Patent, Invention, Novelty, recordal, recordals, registration, Filing of Patent Application, patent registration, Patent application, Patent, Invention, Patent Application Filing, File patent application">
+  <meta property="og:image" content="{% static 'assets/img/Picture1.png' %}" />
+	<meta property="og:title" content="Patent Search, Registration, Annuity, Recordal | ABOU NAJA" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{%  url 'main:patent_fa' %}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5">
+	<link rel="canonical" href="{%  url 'main:patent_fa' %}">
+	<!-- Framework Css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+	<!-- Animation -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/animations.min.css' %}">
+	<!-- Google Font -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700,700i,800,900&font-display=swap" rel="stylesheet"> -->
+	<!-- Style Theme -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+	<!-- Responsive Theme -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <link href="https://gitcdn.ir/library/PersianFonts/BNazanin/style.css" rel="stylesheet" type="text/css" />
+	<!-- Style Straight Theme -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style-straight.css' %}">
+	
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/select2.min.css' %}">
+		<style type="text/css">
+            @media(max-width:767px){
+           .registration_quote{
+               font-size: 1.8em !important;
+           }
+           
+           .text,.overview-pricing-cta p{
+               text-align: center !important;
+               padding-left: none !important;
+               width: 100% !important;
+           }
+   
+           .padd{
+               padding-top: 200px !important
+           }
+   
+               .second-section{
+              padding-top: 380px !important;
+           }
+   
+           #accordion ul li{
+   
+               color: #3a3864;
+               font-size: 14px;
+               line-height: 28px;
+               font-weight: 400;
+               margin-left: 15px;
+           }
+   
+   
+   
+   
+       }
+   
+        @media(min-width:767px){
+                              .first-section {
+       background-position-y: bottom !important;
+       max-height: 653px !important;
+   
+           padding: 180px 0 0 !important;
+   
+   }
+   
+   #accordion ul li{
+   
+               color: #3a3864;
+               font-size: 18px;
+               line-height: 28px;
+               font-weight: 400;
+               margin-left: 15px;
+           }
+   
+   
+        }
+   
+        @media(max-width: 991px)
+        {
+                .first-section {
+       background-position-y: bottom !important;
+       max-height: 653px !important;
+   
+           padding: 180px 0 0 !important;
+   
+   }
+        }
+   
+        
+   @media(min-width: 2000px)
+   {
+                  .first-section {
+       background-position-y: bottom !important;
+       max-height: 653px !important;
+           padding: 180px 0 0 !important;
+   }
+   }
+        @media(min-width: 1441px){
+        .first-section {
+       background-position-y: bottom !important;
+       max-height: 653px !important;
+           padding: 180px 0 0 !important;
+   }
+   }
+   
+   ul.breadcrumbs {
+       padding-left: 0;
+       padding-bottom: 40px;
+       font-size: .8em;
+       line-height: 1em;
+       margin-right: 10px;
+       opacity: .75;
+       white-space: nowrap;
+   }
+   ul.breadcrumbs li {
+       float: right;
+       list-style-type: none;
+       margin: 0 5px;
+       color: #fff;
+   }
+   
+   ul.breadcrumbs li a {
+       text-decoration: underline;
+       color: #fff;
+   }
+   
+   .first-section{
+       background-position: left bottom !important;
+       background-size: cover !important;
+       
+   }
+   
+       @media(min-width:767px) and (max-width: 991px){
+                              .first-section {
+       max-height: 767px !important;
+   }
+   .button-bottom{
+       text-align: left !important;
+   }
+   
+    .second-section{
+              padding-top: 0px !important;
+           }
+        }
+   
+         html,body{
+            overflow-x: hidden !important;
+        }
+   
+        h2{
+            font-weight: 400;
+       margin: .7em 0;
+       font-size: 2.25em;
+        }
+   
+        article p{
+            margin-top: 15px;
+            color: black !important;
+        }
+   
+        article{
+            margin-top: 15px;
+        }
+   
+        @media(min-width: 992px) and (max-width: 1200px){
+   .header-block ul li a{
+       font-size: 14px;
+   }
+   }
+   
+   
+   .message-form .blue-brd-btn{
+       background: #fff;
+   }
+   
+   .message-form{
+   padding: 32px 32px;
+       background-color: #eef0f2;
+       }
+   
+       .blue-brd-btn {
+       cursor: pointer;
+   }
+   
+   .blue-brd-btn:hover {
+       cursor: pointer;
+       color: white !important;
+       background: #000;
+   }
+   
+   .message-form input, .message-form textarea{
+       border-color: #f2f2f2 !important;
+       outline: none;
+       height: 60px;
+   }
+   
+   .message-form input::placeholder,.message-form textarea::placeholder{
+       color: #000 !important;
+       vertical-align: middle !important;
+       line-height: 45px;
+   }
+   
+   
+   
+   .boxes h4, .boxes p, .boxes{
+    text-align: center !important;
+   
+   }
+   .boxes h4{
+       margin-bottom: 15px;
+       font-size: 18px;
+       font-weight: 700;
+       color: #333 !important;
+   }
+   .boxes .reviews-inside{
+       min-height: 475px;
+   
+       /*box-shadow: 3px 3px 0 lightgrey, 0 -5px 2px -5px lightgrey, -5px 0 1px -5px lightgrey;*/
+           box-shadow: 2px 2px 5px lightgrey, 0 -5px 2px -5px lightgrey, -5px 0 1px -5px lightgrey;
+   
+           background-color: #9b871444;
+   
+   }
+   .boxes .reviews-img-wrap img {
+       background-color: transparent; /* شفاف‌سازی پس‌زمینه تصاویر آیکون */
+       border-radius: 50%; /* (اختیاری) اگر می‌خواهید تصاویر دایره‌ای شوند */
+       padding: 5px; /* (اختیاری) برای ایجاد فاصله بین تصویر و مرز کارت */
+       box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* (اختیاری) افزودن سایه به تصویر برای برجسته‌سازی */
+   }
+   
+   .boxes .review-text{
+       color: #333 !important;
+   }
+   
+   .leftalign{text-align: justify;
+       line-height: 21px;
+       padding-bottom:10px;
+   }
+   .leftalign h6{padding-bottom:10px;
+   }
+   
+   @media(min-width: 768px) and (max-width: 991px){
+        .boxes .reviews-inside{
+       min-height: 600px;
+   
+   }
+   
+   }
+   
+   @media (min-width: 1200px)
+   {
+       .contact-xl-last{
+           padding-right:0px !important;
+           padding-left:0px !important;
+       }
+   }
+   /* @font-face {
+               font-family: 'B-NAZANIN'  !important ;
+               src: url("{% static 'fonts/B-NAZANIN.TTF' %}") format('truetype') !important;
+               font-weight: normal;
+               font-style: normal;
+            
+   }
+   
+   body {
+       font-family: 'B-NAZANIN', sans-serif !important;
+       direction: rtl;
+       text-align: right;
+       
+   } */
+
+
+   body {
+    font-family: 'BNazanin', sans-serif;
+    direction: rtl;
+    text-align: right;
+    font-size: 16px; /* تنظیم اندازه فونت */
+    font-weight: 400; /* ضخامت فونت نرمال */
+}
+
+
+.wedomenu ul li.serviceli a span {
+    font-size: 18px; /* تنظیم اندازه فونت دلخواه */
+    font-weight: 500; /* تنظیم ضخامت فونت */
+}
+.list-inline-item a {
+    font-size: 20px !important; /* تنظیم اندازه فونت */
+    font-weight: 600 !important; /* تنظیم ضخامت فونت */
+}
+.reviews-inside h4 {
+    font-size: 23px!important; /* تنظیم اندازه فونت */
+    font-weight: bold!important; /* تنظیم ضخامت فونت به صورت ضخیم */
+}
+.row.align-items-center p {
+    font-size: 20px!important; /* اندازه فونت را به دلخواه تغییر دهید */
+}
+.review-text.leftalign {
+    font-size: 20px!important; /* اندازه فونت را به دلخواه تغییر دهید */
+}
+
+
+
+
+   .logo {
+       background-color: transparent; /* شفاف‌سازی پس‌زمینه */
+       border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+       padding: 5px; /* فاصله بین تصویر و مرز */
+       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* سایه دادن به تصویر */
+       transition: transform 0.3s ease-in-out; /* انیمیشن برای تغییر حالت */
+   }
+   
+   .logo:hover {
+       transform: scale(1.05); /* بزرگ‌نمایی تصویر هنگام هاور */
+   }
+   .img_991 img {
+       display: block;
+       margin: 0 auto; /* وسط‌چین کردن تصویر */
+       max-width: 80%; /* تعیین حداکثر عرض تصویر */
+       border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+   }
+   .product-title {
+    color: black !important;
+}
+.ltr-phone {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+
+       </style>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body class="questions-page">
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-56NHRB3”
+height=“0" width=“0” style=“display:none;visibility:hidden”>
+</iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrapper">
+	<!--===================== Header ========================-->
+	<header>
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-xl-3 col-lg-3 col-md-12">
+					<a href="{% url 'main:homepage_fa'  %}">
+						<img src="{% static 'assets/img/Picture1.png' %}" class="logo" alt="images">
+					</a>
+				</div>
+				<div class="col-xl-9 col-lg-9 col-md-12 text-right">
+					<!--===================== Header Block ========================-->
+					<div class="header-block">
+						<ul class="nav-menu list-unstyled list-inline">
+							<li class="list-inline-item"><a href="{% url 'main:about_us_fa' %}">درباره ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+							<li class="list-inline-item hovermenus" onclick="openwedo()">
+
+								<a href="{% url 'main:services_fa' %}" class="desknavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold">-</span></a>
+								<a href="#" class="mobnavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold"> > </span></a>
+
+								<style>
+                                    .wedomenu{position: fixed; right: 0; left: 0; height: auto; background-color: #f5f9fc; padding: 15px; top: 100px;display: none;width: 1200px}
+                                    .wedomenu ul{position: relative;}
+                                    .wedomenu li{display: block;padding: 0 !important;text-align: center !important;width: 100%;margin-bottom: 0px;border-bottom: 1px dashed #cacaca;}
+                                    .wedomenu li a{display: block;}
+                                    .wedomenu li span{display: block;color: #333;font-weight: 400;font-size: 12px;text-transform: uppercase;text-align: left;padding: 15px 10px;padding-left:0;}
+                                    .arowmake{width: 30px;height: 30px;background-color: #f5f9fc;display: block;transform: rotate(-45deg);position: absolute;bottom: -15px;display: none;}
+                                    .hovermenus:hover .wedomenu{display: block;}
+                                    .hovermenus:hover .arowmake{display: block;}
+                                    
+                                    
+                                    
+                                    .mobnavmenu{display:none;}
+                                    .backtomenu{display:none !important;}
+                                    
+                                    .wedomenu ul{width: 33%;float: left;padding-right: 15px;padding-left: 15px;}
+                                    .wedomenu ul li:last-child{border: none !important}
+                                    
+                                    .wedomenu ul li span{transition: transform 0.3s ease;
+                                      transform: translateX(0px);}
+                                    .wedomenu ul li span:hover{transform: translateX(10px);}
+                                    
+                                    
+                                    @media(max-width:1200px)
+                                    {
+                                        .wedomenu{width:100%;}
+                                    }
+                                    
+                                    
+                                    @media(max-width:768px)
+                                    {
+                                    
+                                    .header-block .nav-menu{height:640px;overflow-y:auto;padding-top:150px;padding-bottom:150px;}
+                                    .header-block .blue-brd-btn{ position: fixed;
+                                        z-index: 9;
+                                        right: 0;
+                                        left: 0;
+                                        bottom: 0;
+                                        background: #fff; }
+                                    
+                                    
+                                    
+                                    .hovermenus:hover .wedomenu{display: block !important;}
+                                    /*.hovermenus:hover .arowmake{display: none !important;}*/
+                                    
+                                    .desknavmenu{display: none !important;}
+                                    .mobnavmenu{display:block !important;}
+                                    .backtomenu{display:block !important;}
+                                    
+                                    .backtomenu span{font-size: 15px !important;
+                                        letter-spacing: 1px !important;
+                                        font-weight: 900 !important;}
+                                    
+                                    .wedomenu{
+                                        overflow-y: auto;
+                                        z-index: 9;
+                                        top: 105px;
+                                        bottom: 0;display: block;height: 200px;overflow-y: auto;left: 0;
+                                        width: 100%;margin-top:10px;
+                                        right: 0;position:unset;}
+                                    .wedomenu li a{padding: 0;position: unset;text-align: left;}
+                                    .wedomenu li span{height: 35px;line-height: 35px;text-align: left;padding: 0;}
+                                    
+                                    .arowmake{display: none !important;    top: 41px;
+                                        right: 49%;}
+                                    
+                                     .wedomenu ul{width: 100%;float: none;padding-right: 0;padding-left: 0;}
+                                    
+                                    
+                                    
+                                    }
+                                    
+                                    .reason-block-cont {
+                                          background-color: #cda352; /* رنگ آبی */
+                                          padding: 20px; /* فاصله داخلی */
+                                          border-radius: 8px; /* گوشه‌های گرد */
+                                          color: white; /* رنگ متن سفید */
+                                          margin-bottom: 20px; /* فاصله پایین */
+                                          height: 9cm;
+                                        }
+                                    
+                                        .reasons-icon-div img {
+                                          max-width: 100%;
+                                          height: auto;
+                                        }
+                                    
+                                        .reasons-desc-div h4,
+                                        .reasons-desc-div p {
+                                          color: white; /* اطمینان از اینکه متن داخل کادر سفید باشد */
+                                        }
+                                        @media (max-width: 768px) {
+                                      .reason-block-cont {
+                                        height: auto; /* ارتفاع به صورت خودکار تنظیم می‌شود */
+                                        padding: 15px; /* کاهش فاصله داخلی برای موبایل */
+                                        margin-bottom: 15px; /* کاهش فاصله پایین */
+                                      }
+                                    }
+                                                /* استایل برای دکمه واتساپ */
+                                                .whatsapp-button {
+                                                position: fixed;
+                                                bottom: 20px; /* فاصله از پایین */
+                                                right: 20px; /* فاصله از سمت راست */
+                                                width: 60px;
+                                                height: 60px;
+                                                background-color: #25D366; /* رنگ واتساپ */
+                                                border-radius: 50%;
+                                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                cursor: pointer;
+                                                z-index: 1000; /* در بالای سایر عناصر */
+                                            }
+                                            .whatsapp-button img {
+                                                width: 30px;
+                                                height: 30px;
+                                            }
+                                            .whatsapp-button:hover {
+                                                background-color: #128C7E; /* رنگ تیره‌تر برای حالت هاور */
+                                            }
+                                            .tooltip {
+                                                position: absolute;
+                                                bottom: 70px; /* فاصله پیام از دکمه */
+                                                right: 0;
+                                                background-color: #333;
+                                                color: #fff;
+                                                padding: 5px 10px;
+                                                border-radius: 5px;
+                                                white-space: nowrap;
+                                                display: none; /* پیش‌فرض پنهان است */
+                                                font-size: 12px;
+                                                z-index: 1001; /* بالاتر از دکمه */
+                                            }
+                                            .whatsapp-button:hover .tooltip {
+                                                display: block; /* نمایش پیام در هنگام هاور */
+                                            }
+                                            .responsive-img {
+                                      width: 100%;  /* تصویر همیشه 100% عرض ستون را می‌گیرد */
+                                      height: 13cm;  /* ارتفاع تصویر به طور خودکار تنظیم می‌شود */
+                                      display: block;
+                                      margin: 0 auto;
+                                    }
+                                    
+                                    @media (max-width: 768px) {
+                                      .responsive-img {
+                                        width: 100%; /* برای موبایل تصویر به صورت کامل عرض ستون را بپوشاند */
+                                      }
+                                    }
+                                    
+                                    @media (max-width: 576px) {
+                                      .col-lg-5 {
+                                        width: 100%; /* ستون کامل را پر می‌کند در موبایل */
+                                        text-align: center; /* تصویر در مرکز قرار می‌گیرد */
+                                      }
+                                    }
+                                    
+                                    
+                                    </style>
+<span class="arowmake"></span>
+
+<div class="container-fluid wedomenu" id="wedomenu">
+	<ul>
+
+	<li class="serviceli"><a href="{% url 'main:trade_fa' %}"><span>خدمات ثبت علائم تجاری</span></a></li>
+		
+			<li class="serviceli"><a href="{% url 'main:online-service_fa' %}"><span>خدمات حفاظت آنلاین</span></a></li>
+
+
+	</ul>
+
+	<ul>
+	    	<li class="serviceli"><a href="{%  url 'main:patent_fa' %}"><span>خدمات ثبت اختراع</span></a></li>
+	    		<li class="serviceli"><a href="{%  url 'main:copyright_fa' %}"><span>کپی رایت  </span></a></li>
+        
+        	<li class="serviceli"><a href="{%  url 'main:translation_fa' %}"><span>خدمات ترجمه</span></a></li>
+	       
+
+	</ul>
+
+	<ul>
+	<li class="serviceli"><a href="{%  url 'main:design_fa' %}" 
+	 ><span> خدمات طراحی صنعتی و مدل کاربردی</span></a></li>
+
+		<li class="serviceli"><a href="{%  url 'main:ip-server_fa' %}"><span>خدمات مالکیت فکری</span></a></li>
+
+	</ul>
+
+
+</div>
+
+							</li>
+							
+							
+							
+		
+							<li class="list-inline-item"><a href="{%  url 'blog:fa_blog-soon' %}">بلاگ<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+
+							<li class="list-inline-item"><a href="{%  url 'main:contact_us_fa' %}">ارتباط با ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+                            <li class="list-inline-item">
+                            {% if lang == 'en' %}
+                            <div>
+                                <a href="{{ path }}">انگلیسی</a> | 
+                                <a href="/fa{{ path }}">فارسی</a>
+                            </div>
+                        {% elif lang == 'fa' %}
+                            <div>
+                                <a href="/en{{ path }}">انگلیسی</a> | 
+                                <a href="{{ path }}">فارسی</a>
+                            </div>
+                        {% else %}
+                            <div>
+                                <a href="/en{{ path }}">انگلیسی</a> | 
+                                <a href="/fa{{ path }}">فارسی</a>
+                            </div>
+                        {% endif %}
+                        </div>
+                        <button class="mobile-btn">
+                            <span></span>
+                        </button></li>
+
+						</ul>
+                        
+
+					<!--===================== End of Header Block ========================-->
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--===================== End of Header ========================-->
+    {% block content %}
+    {% endblock %}
+
+    
+
+	
+	<!--===================== Footer ========================-->
+		<footer>
+            <div class="container">
+                <div class="row footer-menu-wrap">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                        <div class="logo">
+                            <a href="{% url 'main:homepage_fa'  %}"><img src="{% static 'assets/img/Picture2.png' %}" alt="images"></a>
+                            <p></p>
+                            <br>
+                            
+    
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                        <div class="inside-column">
+                            <h4 class="title">شرکت</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="{% url 'main:homepage_fa'  %}">خانه</a></li>
+                                <li><a href="{% url 'main:about_us_fa' %}">درباره ما</a></li>
+                                <li><a href="{% url 'main:services_fa' %}">خدمات ما</a></li>						
+                                
+                                
+                                <li><a href="{%  url 'blog:fa_blog-soon' %}">بلاگ</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 col-md-6 col-12">
+                        <div class="inside">
+                            <h4 class="title">پشتیبانی</h4>
+                            <ul class="list-unstyled">
+                
+                                <li><a href="{%  url 'main:contact_us_fa' %}">ارتباط با ما</a></li>
+                                <!-- <li><a href="https://abounaja.com/faq">FAQ</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-xl-2 col-lg-3 col-md-6 col-12 contact-xl-last">
+                        <h4 class="title">راه های ارتباطی</h4>
+                        <ul class="list-unstyled">	 
+                            آدرس: تهران، خیابان میرداماد، خیابان مصدق جنوبی، کوچه تابان، پلاک 10، واحد 14                                                <!-- <li><a href="https://g.page/AbouNajaIP?share">Al Huda Building, 101,</a></li>
+                            <li><a href="https://g.page/AbouNajaIP?share">55 Street, Garhoud, Dubai</a></li>
+                            <li><a href="https://g.page/AbouNajaIP?share">United Arab Emirates</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#d7b4b8b9b9b2b4a397b6b5b8a2b9b6bdb6f9b4b8ba"><span class="__cf_email__" data-cfemail="492a2627272c2a3d09282b263c27282328672a2624">[email&#160;protected]</span></a></li> -->
+                            <li><a href="tel:+989211383775" class="small-text"><strong>موبایل</strong></a></li>
+                            <li><a href="tel:+989211383775" class="small-text ltr-phone">+98(912)138 37 75 </a></li>
+                            <li><a href="tel:+982122271571" class="small-text"><strong>تلفن</strong> </a></li>
+                            <li><a href="tel:+982122271571" class="small-text ltr-phone">+98(21)222 71 571</a></li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--===================== Copyright ========================-->
+ 
+            <!--===================== End of Copyright ========================-->
+        </footer>
+        <!--===================== End of Footer ========================-->
+    </div><!--wrapper-->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"></script>
+    
+    <script src="https://abounaja.com/assets/js/lib/bootstrap.min.js"></script>
+    
+    <script src="https://abounaja.com/assets/js/lib/css3-animate-it.js"></script>
+    
+    <script type="text/javascript" src="https://abounaja.com/assets/js/select2.min.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+          var hash = window.location.hash;
+            hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+    
+            $('.nav-tabs a').click(function (e) {
+                $(this).tab('show');
+                var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+                window.location.hash = this.hash;
+                $('html,body').scrollTop(scrollmem);
+            });
+    
+             $('#accordion .collapse').collapse('show');
+    
+    
+                // Variable to hold request
+    var request;
+    
+        // Bind to the submit event of our form
+    $("#questionform").submit(function(event){
+    
+        // Prevent default posting of form - put here to work in case of errors
+        event.preventDefault();
+    
+         var form = $('#questionform')[0];
+        var formData = new FormData(form);
+    
+        // Abort any pending request
+        if (request) {
+            request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+    
+        // Let's select and cache all the fields
+        var $inputs = $form.find("input, select, button, textarea");
+    
+        // Serialize the data in the form
+        var serializedData = $form.serialize();
+    
+        // Let's disable the inputs for the duration of the Ajax request.
+        // Note: we disable elements AFTER the form data has been serialized.
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
+    
+        // Fire off the request to /form.php
+        request = $.ajax({
+            url: "https://abounaja.com/post-question-form",
+            type: "POST",
+            dataType:'JSON',
+            data: formData,
+             processData: false,
+            contentType: false
+        });
+        // Callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR){
+            // Log a message to the console
+            console.log("success");
+            console.log(textStatus);
+            console.log(jqXHR);
+            $inputs.prop("disabled", false);
+    
+            if(textStatus == 'success')
+            {
+              $('.questionBlock').html(
+                '<div class="alert alert-success" style="padding: 15px;margin-bottom: 15px;"><button type="button" class="close" style="font-weight: bold;color: #000;line-height: 0.5;" data-dismiss="alert">&times;</button>Your question has been submitted, we will repond to you soon.</div>');
+            }
+           
+             $('#questionform').trigger("reset");
+             return false;
+    
+        });
+    
+        // Callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            // Log the error to the console
+            console.error(
+                "The following error occurred: "+
+                textStatus, errorThrown
+            );
+        });
+    
+        // Callback handler that will be called regardless
+        // if the request failed or succeeded
+        request.always(function () {
+            // Reenable the inputs
+            $inputs.prop("disabled", false);
+        });
+    
+    });
+    
+    
+            // **********************************************************************//
+        // 08. Mobile Button
+        // **********************************************************************//
+        var menu = $('.header-block');
+        $('.mobile-btn').on('click', function(){
+            menu.toggle("slow");
+            $(this).toggleClass('active');
+        });
+    
+        $('.list-inline-item.top-sub-menu').on('click', function(){
+            $(this).parent().find('.sub-menu').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+        
+             $('.country').select2({
+        allowClear:true,
+        multiple:true,
+        placeholder:'Countries of Interest',
+    
+       
+      });
+    
+            
+    
+        });
+         
+    </script>
+ <style type="text/css">
+    .cookie-consent {
+    font-size: 0.9em;
+   /* padding-top: 0.5em;*/
+    padding-left: 1em;
+    /*padding-bottom: 0.5em;*/
+    background: rgb(243,248,252);
+    border-radius: 20px;
+    /*box-shadow: 0 0px 2px #ddd;*/
+    text-align: center;
+     box-shadow: 2px 2px 5px lightgrey, 0 -5px 2px -5px lightgrey, -5px 0 1px -5px lightgrey;
+        
+     
+}
+
+.cookie-consent__message {
+    display: inline-block;
+    color: #000;
+
+}
+
+.cookie-consent__message p {
+    margin: 0;
+}
+
+.cookie-consent__agree {
+    font-weight: bold;
+    margin: 0 0 0 1em;
+    padding: .7em 1em;
+    color: #000;
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    transition: all 0.8s;
+    
+    box-shadow: 0 2px 5px rgba(217, 142, 0, 0.15);
+}
+
+.cookie-consent__agree:hover {
+   /* background-color: #dddddd;*/
+    
+    cursor: pointer;
+    /*box-shadow: 2px solid #f3af3c;
+    box-shadow: 0 0 15px #f3af3c;*/
+}
+
+.cookie-consent__agree:active {
+    top: 1px;
+}
+
+
+
+
+
+/*///*/
+
+
+
+/*.cookie-consent__agree:hover{
+
+  border-top-color: #f3af3c;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+
+  transition-delay: .2s;
+ 
+} 
+
+.cookie-consent__agree:hover{
+  border-right-color: #f3af3c;
+  transition-delay: .4s;
+ 
+} 
+
+.cookie-consent__agree:hover{
+  border-bottom-color: #f3af3c;
+  transition-delay: .6s;
+ 
+} 
+
+.cookie-consent__agree:hover{
+  border-left-color: #f3af3c;
+  transition-delay: .8s;
+ 
+} */
+
+/*@keyframes  bg {
+    0% {
+        border-top:2px solid #fff;
+        border-top-width:50%;
+    }
+    25% {
+      border-top:2px solid #f3af3c;
+      border-top-width:100%;
+        
+    }
+    50% {
+      border-right:2px solid #f3af3c;
+      border-right-width:50%;
+       
+    }
+    75% {
+       border-bottom: 2px solid #f3af3c;
+       border-right-width:100%;
+        
+    }
+    100% {
+        border-left:2px solid #f3af3c;
+        border:2px solid #f3af3c;
+    }
+}*/
+
+.cookie-consent__agree {
+    /*width: 25%;
+    margin: 2rem auto;
+    padding: 2em;*/
+    
+    background-repeat: no-repeat;
+    border-radius: 20px;
+     /*border:1px solid #f3af3c;*/
+   
+    /*animation-play-state: running;*/
+    box-shadow: 2px 2px 5px lightgrey, 0 -5px 2px -5px lightgrey, -5px 0 1px -5px lightgrey;
+    /*transition:all 200ms ease-in;*/
+}
+
+.cookie-consent__agree:hover {
+     /*animation: bg 10s cubic-bezier(0.19, 1, 0.22, 1) 1;
+    animation-play-state: running;*/
+}
+
+
+.draw-border {
+  /*box-shadow: inset 0 0 0 4px #58afd1;*/
+  /*color: #58afd1;*/
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+ 
+
+  z-index: 1000000;
+}
+/*.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+
+}
+.draw-border::after {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  
+}
+.draw-border::before {
+  border-top-width: 2px;
+  border-right-width: 2px;
+
+}
+.draw-border:hover {
+  color: #f3af3c;
+ 
+
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #f3af3c;
+
+  -webkit-transition: border-color 0s, width 0.5s, height 0.5s;
+  transition: border-color 0s, width 0.5s, height 0.5s;
+  width: 90%;
+  height: 90%;
+
+ 
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0s, 0.5s;
+          transition-delay: 0s, 0s, 0.5s;
+           border-radius: 20px;
+   -webkit-border-radius: 20px;
+   width: 100%;
+  height: 100%;
+
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.5s;
+          transition-delay: 0s, 0s, 0.5s;
+          border-radius: 20px;
+   -webkit-border-radius: 20px;
+   width: 100%;
+  height: 100%;
+
+}*/
+
+.draw-border::before,
+.draw-border::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+.draw-border::before,
+.draw-border::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.draw-border::before {
+  top: 0;
+  left: 0;
+}
+
+.draw-border::after {
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border:hover {
+  color: #f3af3c;
+  border-radius: 20px;
+   -webkit-border-radius: 20px;
+}
+
+.draw-border:hover::before,
+.draw-border:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+   -webkit-border-radius: 20px;
+}
+
+.draw-border:hover::before {
+  border-top-color: #f3af3c;
+  border-right-color: #f3af3c;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  border-radius: 20px;
+   -webkit-border-radius: 20px;
+}
+
+.draw-border:hover::after {
+  border-bottom-color: #f3af3c;
+  border-left-color: #f3af3c;
+  transition: border-color 0s ease-out 0.3s, width 0.4s ease-out 0.5s, height 0.6s ease-out 0.75s;
+  border-radius: 20px;
+   -webkit-border-radius: 20px;
+}
+
+
+
+
+
+.draw-border:focus {
+  /*outline: 1px dotted #55d7dc;*/
+ /* border-radius: 20px;*/
+}
+
+
+
+
+
+
+
+/* Ripple Out */
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    opacity: 0;
+  }
+}
+@keyframes  hvr-ripple-out {
+  100% {
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: #f3af3c solid 2px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+}
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+}
+
+
+  @media(max-width:375px){
+         .cookie-consent__message.small-devices{
+          font-size: 11px;
+         }
+
+         .cookie-consent__agree.small-devices{
+          width: 90px !important;
+          font-size: 11px;
+         }
+     }
+
+
+     @media(min-width:375px) and (max-width: 428px){
+         .cookie-consent__message.small-devices{
+          font-size: 12px;
+         }
+
+         .cookie-consent__agree.small-devices{
+          width: 90px !important;
+          font-size: 12px;
+         }
+     }
+
+
+
+
+</style>
+    <div style="position: fixed;bottom: 15px;width: 100%;z-index: 1000;" class="d-none d-md-block">
+    <div style="margin: 0 auto; width: fit-content;">
+    
+    
+
+        
+    
+    </div>
+    </div>
+    
+    
+    <div style="position: fixed;bottom: 0px;width: 100%;z-index: 1000;" class="d-md-none">
+    <div style="">
+    
+    
+    <div class="js-cookie-consent cookie-consent" style="width: 100%;text-align: left;border-radius: 0px;padding-top: 15px;">
+    
+    
+      
+        <!-- <div class="clearfix"></div> -->
+      
+         </div>
+        
+    
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+        <script>
+    
+            window.laravelCookieConsent = (function () {
+    
+                const COOKIE_VALUE = 1;
+                const COOKIE_DOMAIN = 'abounaja.com';
+    
+                function consentWithCookies() {
+                    setCookie('laravel_cookie_consent', COOKIE_VALUE, 7300);
+                    hideCookieDialog();
+                }
+    
+                function cookieExists(name) {
+                    return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+                }
+    
+                function hideCookieDialog() {
+                    const dialogs = document.getElementsByClassName('js-cookie-consent');
+    
+                    for (let i = 0; i < dialogs.length; ++i) {
+                        dialogs[i].style.display = 'none';
+                    }
+                }
+    
+                function setCookie(name, value, expirationInDays) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                    document.cookie = name + '=' + value
+                        + ';expires=' + date.toUTCString()
+                        + ';domain=' + COOKIE_DOMAIN
+                        + ';path=/'
+                        + '';
+                }
+    
+                if (cookieExists('laravel_cookie_consent')) {
+                    hideCookieDialog();
+                }
+    
+                const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+    
+                for (let i = 0; i < buttons.length; ++i) {
+                    buttons[i].addEventListener('click', consentWithCookies);
+                }
+    
+                return {
+                    consentWithCookies: consentWithCookies,
+                    hideCookieDialog: hideCookieDialog
+                };
+            })();
+        </script>
+    
+    </body>
+    </html>
