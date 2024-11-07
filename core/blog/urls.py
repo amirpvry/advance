@@ -28,7 +28,9 @@ urlpatterns = [
         name="post-delete",
     ),
     path("api/v1/", include("blog.api.v1.urls")),
-    path("blog-posting/", blog_posting, name="blog-posting"),
+    path("en/blog-posting/", blog_posting, name="blog-posting"),
+    # path("fa/blog-posting/", fa_blog_posting, name="fa_blog-posting"),
+
     path("en/blog-soon/", blog_soon, name="blog-soon"),
     path("fa/blog-soon/", fa_blog_soon, name="fa_blog-soon"),
     path("tag/<str:tag_name>", tagged_posts, name="tag"),
