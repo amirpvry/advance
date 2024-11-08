@@ -596,21 +596,21 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                             <li class="list-inline-item">
                                 {% if lang == 'en' %}
                                 <div>
-                                    <a href="{{ path }}">English</a> | 
-                                    <a href="/fa{{ path }}">Persian</a>
+                                    <a href="{% url 'blog:blog-posting' %}">English</a> | 
+                                    <a href="{% url 'blog:fa_blog_posting' %}">Persian</a>
                                 </div>
                             {% elif lang == 'fa' %}
                                 <div>
-                                    <a href="/en{{ path }}">English</a> | 
-                                    <a href="{{ path }}">Persian</a>
+                                    <a href="{% url 'blog:blog-posting' %}">English</a> | 
+                                    <a href="{% url 'blog:fa_blog_posting' %}">Persian</a>
                                 </div>
                             {% else %}
                                 <div>
-                                    <a href="/en{{ path }}">English</a> | 
-                                    <a href="/fa{{ path }}">Persian</a>
+                                    <a href="{% url 'blog:blog-posting' %}">English</a> | 
+                                    <a href="{% url 'blog:fa_blog_posting' %}">Persian</a>
                                 </div>
                             {% endif %}
-                            </div>
+                            
                             <button class="mobile-btn">
                                 <span></span>
                             </button></li>

@@ -571,26 +571,26 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							
 							
 		
-							<li class="list-inline-item"><a href="{%  url 'blog:fa_blog-soon' %}">بلاگ<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
+							<li class="list-inline-item"><a href="{%  url 'blog:fa_blog_posting' %}">بلاگ<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 
 							<li class="list-inline-item"><a href="{%  url 'main:contact_us_fa' %}">ارتباط با ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
                             <li class="list-inline-item">
-                            {% if lang == 'en' %}
-                            <div>
-                                <a href="{{ path }}">انگلیسی</a> | 
-                                <a href="/fa{{ path }}">فارسی</a>
-                            </div>
-                        {% elif lang == 'fa' %}
-                            <div>
-                                <a href="/en{{ path }}">انگلیسی</a> | 
-                                <a href="{{ path }}">فارسی</a>
-                            </div>
-                        {% else %}
-                            <div>
-                                <a href="/en{{ path }}">انگلیسی</a> | 
-                                <a href="/fa{{ path }}">فارسی</a>
-                            </div>
-                        {% endif %}
+                                {% if lang == 'en' %}
+                                <div>
+                                    <a href="{% url 'blog:blog-posting' %}">انگلیسی</a> | 
+                                    <a href="{% url 'blog:fa_blog_posting' %}">فارسی</a>
+                                </div>
+                            {% elif lang == 'fa' %}
+                                <div>
+                                    <a href="{% url 'blog:blog-posting' %}">انگلیسی</a> | 
+                                    <a href="{% url 'blog:fa_blog_posting' %}">فارسی</a>
+                                </div>
+                            {% else %}
+                                <div>
+                                    <a href="{% url 'blog:blog-posting' %}">انگلیسی</a> | 
+                                    <a href="{% url 'blog:fa_blog_posting' %}">فارسی</a>
+                                </div>
+                            {% endif %}
                         </div>
                         <button class="mobile-btn">
                             <span></span>
@@ -633,7 +633,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                                 <li><a href="{% url 'main:services_fa' %}">خدمات ما</a></li>						
                                 
                                 
-                                <li><a href="{%  url 'blog:fa_blog-soon' %}">بلاگ</a></li>
+                                <li><a href="{%  url 'blog:fa_blog_posting' %}">بلاگ</a></li>
                                 
                             </ul>
                         </div>
