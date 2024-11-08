@@ -1,4 +1,4 @@
-{% extends 'blog_base_2.html' %}
+{% extends 'fa_blog_base_2.html' %}
 {% load static %}
 {% block content %}
 
@@ -92,20 +92,19 @@
 
 		<div class="col-xl-3 col-lg-3 col-12 animated bounceInRight delay-250">
 			<aside>
-				<!--===================== Widget Tags ========================-->
-				<div class="widget-category">
+				<!--===================== Widget Category ========================-->
+				<!-- <div class="widget-category">
 					<h6 class="widget-title">Tags</h6>
 					<ul class="list-unstyled">
 						{% for tag in tags %}
-							<li><a href="{% url 'blog:tag' tag.name %}"><span>#</span>{{ tag.name }}</a></li>
+							<li><a href="{% url 'tagged_posts' tag.slug %}"><span>#</span>{{ tag.name }}</a></li>
 						{% endfor %}
 					</ul>
-				</div>
-				<!--===================== End of Widget Tags ========================-->
+				</div> -->
+				<!--===================== End of Widget Category ========================-->
 			</aside>
 		</div>
 	</div>
 </div>
-
 
 {% endblock %}

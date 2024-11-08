@@ -1,6 +1,5 @@
 from django.db import models
-
-
+from taggit.managers import TaggableManager
 from django.urls import reverse
 
 # from taggit.managers import TaggableManager
@@ -9,6 +8,11 @@ from django.urls import reverse
 
 # User = get_user_model()
 
+# class Tag(models.Model):
+#     name = models.CharField(max_length=100, unique=True)
+
+#     def __str__(self):
+#         return self.name
 
 class Post(models.Model):
 
@@ -25,7 +29,8 @@ class Post(models.Model):
     publish_date = models.DateTimeField(null=True)
     create_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
-
+    tags = TaggableManager()  # اضافه کردن فیلد تگ
+   
     def __str__(self) -> str:
         return self.title
 
