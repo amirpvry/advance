@@ -14,6 +14,7 @@ from django.urls import reverse
 #     def __str__(self):
 #         return self.name
 
+
 class Post(models.Model):
 
     author = models.ForeignKey("accounts.Profile", on_delete=models.CASCADE)
@@ -30,7 +31,7 @@ class Post(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     tags = TaggableManager()  # اضافه کردن فیلد تگ
-   
+
     def __str__(self) -> str:
         return self.title
 

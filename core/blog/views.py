@@ -29,9 +29,10 @@ class IndexView(TemplateView):
         context["name"] = "index"
         context["post"] = Post.objects.all()
         return context
-    
+
 
 from django.core.paginator import Paginator
+
 
 class PostList(ListView):
     context_object_name = "posts"
@@ -39,7 +40,7 @@ class PostList(ListView):
 
     def get_queryset(self):
         queryset = Post.objects.filter(status=True)
-        tag_name = self.request.GET.get('tag')
+        tag_name = self.request.GET.get("tag")
         if tag_name:
             tag = get_object_or_404(Tag, name=tag_name)
             queryset = queryset.filter(tags=tag)
@@ -49,14 +50,14 @@ class PostList(ListView):
         context = super().get_context_data(**kwargs)
         tags = Tag.objects.all()
         paginator = Paginator(tags, 10)  # برای صفحه‌بندی تگ‌ها
-        page = self.request.GET.get('page')
+        page = self.request.GET.get("page")
         try:
             tags = paginator.page(page)
         except PageNotAnInteger:
             tags = paginator.page(1)
         except EmptyPage:
             tags = paginator.page(paginator.num_pages)
-        context['tags'] = tags  # صفحه‌بندی تگ‌ها
+        context["tags"] = tags  # صفحه‌بندی تگ‌ها
         return context
 
 
@@ -68,8 +69,6 @@ class Redirecttodjango(RedirectView):
         post = get_object_or_404(Post, pk=kwargs["pk"])
 
         return super().get_redirect_url(*args, **kwargs)
-
-
 
 
 class PostDetailView(DetailView):
@@ -110,6 +109,7 @@ def fa_blog_posting(request):
     )  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
     return render(request, "blog/fa_blog_posting.html", {"posts": posts})
 
+
 def blog_soon(request):
     return render(request, "blog/blog-soon.html")
 
@@ -120,11 +120,12 @@ def fa_blog_soon(request):
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 def tagged_posts(request, name):
     tag = get_object_or_404(Tag, name=name)
     posts_list = Post.objects.filter(tags=tag)
     paginator = Paginator(posts_list, 3)
-    page = request.GET.get('page')
+    page = request.GET.get("page")
 
     try:
         posts = paginator.page(page)
@@ -134,4 +135,3 @@ def tagged_posts(request, name):
         posts = paginator.page(paginator.num_pages)
 
     return render(request, "blog/blog-posting.html", {"posts": posts, "tag": tag})
-
