@@ -284,22 +284,17 @@ body {
     
     
 }
-.logo {
-    background-color: transparent; /* شفاف‌سازی پس‌زمینه */
-    border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
-    padding: 5px; /* فاصله بین تصویر و مرز */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* سایه دادن به تصویر */
-    transition: transform 0.3s ease-in-out; /* انیمیشن برای تغییر حالت */
-}
+
+
 
 .logo:hover {
     transform: scale(1.05); /* بزرگ‌نمایی تصویر هنگام هاور */
 }
 .img_991 img {
-    display: block;
+    
     margin: 0 auto; /* وسط‌چین کردن تصویر */
-    max-width: 80%; /* تعیین حداکثر عرض تصویر */
-    border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+    max-width: 100%; /* تعیین حداکثر عرض تصویر */
+    border-radius: 0px; /* گرد کردن گوشه‌های تصویر */
 }
 .product-title {
     color: black !important;
@@ -323,13 +318,7 @@ body {
     font-size: 1rem; /* سایز پاراگراف */
 }
 
-.img_991 picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-    max-width: none;
-}
+
 
 @media (max-width: 767px) {
     .c-container {
@@ -467,9 +456,11 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
     }
 
     .reasons-icon-div img {
-      max-width: 100%;
-      height: auto;
-    }
+  max-width: 1000px;
+  max-height: 1000px;
+  object-fit: contain;
+}
+
 
     .reasons-desc-div h4,
     .reasons-desc-div p {
@@ -586,17 +577,17 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                                 {% if lang == 'en' %}
                                 <div>
                                     <a href="{{ path }}">English</a> | 
-                                    <a href="/fa{{ path }}">Persian</a>
+                                    <a href="/fa{{ path }}">فارسی</a>
                                 </div>
                             {% elif lang == 'fa' %}
                                 <div>
                                     <a href="/en{{ path }}">English</a> | 
-                                    <a href="{{ path }}">Persian</a>
+                                    <a href="{{ path }}">فارسی</a>
                                 </div>
                             {% else %}
                                 <div>
                                     <a href="/en{{ path }}">English</a> | 
-                                    <a href="/fa{{ path }}">Persian</a>
+                                    <a href="/fa{{ path }}">فارسی</a>
                                 </div>
                             {% endif %}
                             </div>
