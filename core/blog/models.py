@@ -1,7 +1,7 @@
 from django.db import models
 from taggit.managers import TaggableManager
 from django.urls import reverse
-from ckeditor.fields import RichTextField
+# from ckeditor.fields import RichTextField
 # from taggit.managers import TaggableManager
 
 # Create your models here.
@@ -20,7 +20,7 @@ class Post(models.Model):
     author = models.ForeignKey("accounts.Profile", on_delete=models.CASCADE)
 
     title = models.CharField(max_length=256)
-    content = RichTextField()  # تغییر این فیلد
+    content = models.TextField() # تغییر این فیلد
     categories = models.ForeignKey("Categories", on_delete=models.SET_NULL, null=True)
     # tags = TaggableManager()
 
