@@ -371,7 +371,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							<li class="list-inline-item"><a href="{% url 'main:about_us' %}">About Us<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 							<li class="list-inline-item hovermenus" onclick="openwedo()">
 
-								<a href="{% url 'main:services' %}" class="desknavmenu">Our Services<span style="color: #f3af3c;font-weight: bold">-</span></a>
+								<a  class="desknavmenu">Our Services<span style="color: #f3af3c;font-weight: bold">-</span></a>
 								<a href="#" class="mobnavmenu">Our Services<span style="color: #f3af3c;font-weight: bold"> > </span></a>
 
 								<style>
@@ -456,20 +456,39 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
     }
 
     .reasons-icon-div {
-    width: 100px; /* یا هر اندازه دلخواه */
-    height: 100px; /* باید با عرض یکسان باشد تا دایره ایجاد شود */
-    border-radius: 50%; /* این گزینه باعث می‌شود div دایره‌ای شود */
-    overflow: hidden; /* برای مخفی کردن بخش‌های اضافی تصویر */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* برای مرکز کردن تصویر */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+.reason-4 {
+    background-image: url('{% static "assets/img/jende/Pasted image.png" %}');
+}
+
+.reason-2 {
+    background-image: url('{% static "assets/img/jende/file-tR1N7ltzsaheTGcNhaKP4gsf.webp" %}');
+}
+
+.reason-3 {
+    background-image: url('{% static "assets/img/jende/file-PP5TjNoO1zRG8JDOaxrOS4Kb.webp" %}');
+}
+
+.reason-1 {
+    background-image: url('{% static "assets/img/jende/trade filling.jpg" %}');
+}
+
+
 
 .reasons-icon-div img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* باعث می‌شود تصویر به‌خوبی درون دایره قرار بگیرد */
+    object-fit: cover;
+    object-position: center; /* اگر بخشی از تصویر برش خورده، مرکز تصویر را نمایش می‌دهد */
 }
+
 
 
     .reasons-desc-div h4,
@@ -641,7 +660,6 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'main:homepage'  %}">Home</a></li>
                                 <li><a href="{% url 'main:about_us' %}">About Us</a></li>
-                                <li><a href="{% url 'main:services' %}">Our Services</a></li>						
                                 
                                 
                                 <li><a href="{%  url 'blog:blog-posting' %}">Blog</a></li>

@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     "mail_templated",
     "django_celery_beat",
     "taggit",
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -158,6 +160,17 @@ MEDIA_ROOT = BASE_DIR / "media"
 STATICFILES_DIRS = [
     BASE_DIR / "staticfiles",
 ]
+
+
+# تنظیمات CKEditor
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # ابزارهای کامل
+        'height': 300,
+        'width': 'auto',
+    },
+}
 
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 

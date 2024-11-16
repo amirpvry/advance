@@ -284,13 +284,7 @@ body {
     
     
 }
-.logo {
-    background-color: transparent; /* شفاف‌سازی پس‌زمینه */
-    border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
-    padding: 5px; /* فاصله بین تصویر و مرز */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* سایه دادن به تصویر */
-    transition: transform 0.3s ease-in-out; /* انیمیشن برای تغییر حالت */
-}
+
 
 .logo:hover {
     transform: scale(1.05); /* بزرگ‌نمایی تصویر هنگام هاور */
@@ -393,7 +387,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							<li class="list-inline-item"><a href="{% url 'main:about_us' %}">About Us<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 							<li class="list-inline-item hovermenus" onclick="openwedo()">
 
-								<a href="{% url 'main:services' %}" class="desknavmenu">Our Services<span style="color: #f3af3c;font-weight: bold">-</span></a>
+								<a  class="desknavmenu">Our Services<span style="color: #f3af3c;font-weight: bold">-</span></a>
 								<a href="#" class="mobnavmenu">Our Services<span style="color: #f3af3c;font-weight: bold"> > </span></a>
 
 								<style>
@@ -597,17 +591,17 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                                 {% if lang == 'en' %}
                                 <div>
                                     <a href="{% url 'blog:blog-posting' %}">English</a> | 
-                                    <a href="{% url 'blog:fa_blog_posting' %}">Persian</a>
+                                    <a href="{% url 'blog:fa_blog_posting' %}">فارسی</a>
                                 </div>
                             {% elif lang == 'fa' %}
                                 <div>
                                     <a href="{% url 'blog:blog-posting' %}">English</a> | 
-                                    <a href="{% url 'blog:fa_blog_posting' %}">Persian</a>
+                                    <a href="{% url 'blog:fa_blog_posting' %}">فارسی</a>
                                 </div>
                             {% else %}
                                 <div>
                                     <a href="{% url 'blog:blog-posting' %}">English</a> | 
-                                    <a href="{% url 'blog:fa_blog_posting' %}">Persian</a>
+                                    <a href="{% url 'blog:fa_blog_posting' %}">فارسی</a>
                                 </div>
                             {% endif %}
                             
@@ -651,7 +645,6 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'main:homepage'  %}">Home</a></li>
                                 <li><a href="{% url 'main:about_us' %}">About Us</a></li>
-                                <li><a href="{% url 'main:services' %}">Our Services</a></li>						
                                 
                                 
                                 <li><a href="{%  url 'blog:blog-posting' %}">Blog</a></li>

@@ -366,7 +366,7 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
 							<li class="list-inline-item"><a href="{% url 'main:about_us_fa' %}">درباره ما<span style="color: #f3af3c;font-weight: bold">-</span></a></li>
 							<li class="list-inline-item hovermenus" onclick="openwedo()">
 
-								<a href="{% url 'main:services_fa' %}" class="desknavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold">-</span></a>
+								<a  class="desknavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold">-</span></a>
 								<a href="#" class="mobnavmenu">خدمات ما<span style="color: #f3af3c;font-weight: bold"> > </span></a>
 
 								<style>
@@ -524,7 +524,40 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                                         text-align: center; /* تصویر در مرکز قرار می‌گیرد */
                                       }
                                     }
-                                    
+                                    .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    color: white;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-img {
+    width: 30px; /* اندازه تصویر می‌توانید تغییر دهید */
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contact-text {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
                                     
                                     </style>
 <span class="arowmake"></span>
@@ -623,7 +656,6 @@ height=“0" width=“0” style=“display:none;visibility:hidden”>
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'main:homepage_fa'  %}">خانه</a></li>
                                 <li><a href="{% url 'main:about_us_fa' %}">درباره ما</a></li>
-                                <li><a href="{% url 'main:services_fa' %}">خدمات ما</a></li>						
                                 
                                 
                                 <li><a href="{%  url 'blog:fa_blog_posting' %}">بلاگ</a></li>

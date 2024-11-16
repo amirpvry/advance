@@ -65,6 +65,7 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
+    path('ckeditor/', include('ckeditor_uploader.urls')),  # اضافه کردن مسیر CKEditor
 ]
 
 urlpatterns += i18n_patterns(

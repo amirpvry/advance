@@ -1,15 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <a><h2>{{object.id}} - {{object}}</h2>
-    <small>{{object.author}} - {{object.publish_date}} - <h1>{{ object.title }}</h1> </small>
+{% extends 'blog_base_2.html' %}
+{% load static %}
+{% block content %}
 
-    
-</body>
-</html>
+
+<style>
+
+/* طراحی کلی صفحه */
+.blog-post {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Vazir', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* تصویر بلاگ */
+.blog-post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* عنوان بلاگ */
+.blog-post-title h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* اطلاعات نویسنده و تاریخ */
+.blog-post-meta {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* متن محتوا */
+.blog-post-content {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* لینک‌ها داخل محتوا */
+.blog-post-content a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+.blog-post-content a:hover {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+</style>
+
+
+
+<div class="blog-post">
+    <!-- نمایش تصویر -->
+    {% if object.image %}
+        <div class="blog-post-image">
+            <img src="{{ object.image.url }}" alt="{{ object.title }}">
+        </div>
+    {% endif %}
+
+    <!-- نمایش عنوان -->
+    <div class="blog-post-title">
+        <h1>{{ object.title }}</h1>
+    </div>
+
+    <!-- اطلاعات نویسنده و تاریخ -->
+    <div class="blog-post-meta">
+        <span>نویسنده: {{ object.author }}</span> |
+        <span>تاریخ انتشار: {{ object.publish_date|date:"d F Y" }}</span>
+    </div>
+
+    <!-- نمایش محتوا -->
+    <div class="blog-post-content">
+        <p>{{ object.content }}</p>
+    </div>
+</div>
+{% endblock %}
