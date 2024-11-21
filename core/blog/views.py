@@ -12,6 +12,8 @@ from django.views.generic.list import ListView
 from .forms import PostForm
 from django.views.generic.edit import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from taggit.models import Tag
 
 
 # Create your views here.
@@ -29,6 +31,36 @@ class IndexView(TemplateView):
         return context
 
 
+from django.core.paginator import Paginator
+
+
+class PostList(ListView):
+    context_object_name = "posts"
+    paginate_by = 3
+
+    def get_queryset(self):
+        queryset = Post.objects.filter(status=True)
+        tag_name = self.request.GET.get("tag")
+        if tag_name:
+            tag = get_object_or_404(Tag, name=tag_name)
+            queryset = queryset.filter(tags=tag)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        tags = Tag.objects.all()
+        paginator = Paginator(tags, 10)  # برای صفحه‌بندی تگ‌ها
+        page = self.request.GET.get("page")
+        try:
+            tags = paginator.page(page)
+        except PageNotAnInteger:
+            tags = paginator.page(1)
+        except EmptyPage:
+            tags = paginator.page(paginator.num_pages)
+        context["tags"] = tags  # صفحه‌بندی تگ‌ها
+        return context
+
+
 class Redirecttodjango(RedirectView):
 
     url = "http://django.org/redirect"
@@ -37,16 +69,6 @@ class Redirecttodjango(RedirectView):
         post = get_object_or_404(Post, pk=kwargs["pk"])
 
         return super().get_redirect_url(*args, **kwargs)
-
-
-class PostList(ListView):
-    # model = Post
-    context_object_name = "posts"
-    paginate_by = 1
-    # ordering = '-id'
-
-    def get_queryset(self):
-        return Post.objects.filter(status=True)
 
 
 class PostDetailView(DetailView):
@@ -72,3 +94,44 @@ class PostUpdateView(UpdateView):
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = "/blog/post/"
+
+
+def blog_posting(request):
+    posts = Post.objects.filter(
+        status=True
+    )  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
+    return render(request, "blog/blog-posting.html", {"posts": posts})
+
+
+def fa_blog_posting(request):
+    posts = Post.objects.filter(
+        status=True
+    )  # فرض می‌کنیم که فقط پست‌های منتشر شده را نمایش می‌دهیم
+    return render(request, "blog/fa_blog_posting.html", {"posts": posts})
+
+
+def blog_soon(request):
+    return render(request, "blog/blog-soon.html")
+
+
+def fa_blog_soon(request):
+    return render(request, "blog/fa_blog-soon.html")
+
+
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+
+def tagged_posts(request, name):
+    tag = get_object_or_404(Tag, name=name)
+    posts_list = Post.objects.filter(tags=tag)
+    paginator = Paginator(posts_list, 3)
+    page = request.GET.get("page")
+
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+
+    return render(request, "blog/blog-posting.html", {"posts": posts, "tag": tag})

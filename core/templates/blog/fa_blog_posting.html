@@ -1,0 +1,110 @@
+{% extends 'fa_blog_base_2.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container margin-bottom margin-top animatedParent">
+	<style>
+        .post-grid {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .last-news-img-wrap {
+            flex: 0 0 auto;
+        }
+
+        .post-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .last-news-info-wrap {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .last-news-title {
+            overflow: hidden;
+            max-height: 86px;
+            text-overflow: ellipsis !important;
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+
+        .read-more-btn {
+            margin-top: auto;
+            text-align: right;
+        }
+	</style>
+
+	<div class="row">
+		<div class="col-xl-9 col-lg-9 col-12">
+			<div class="row">
+				{% for post in posts %}
+					<div class="col-xl-4 col-lg-4 col-sm-6 col-12 pr-2 pl-2 animated bounceInLeft delay-250">
+						<!--===================== Post ========================-->
+						<article class="post post-grid">
+							<div class="last-news-img-wrap">
+								<a href="{{ post.get_absolute_url }}">
+									<img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+								</a>
+							</div>
+							<div class="last-news-info-wrap">
+								<h4 class="last-news-date">{{ post.publish_date }}</h4>
+								<a href="{{ post.get_absolute_url }}">
+									<h4 title="{{ post.title }}" class="last-news-title">{{ post.title }}</h4>
+								</a>
+								<a href="{{ post.get_absolute_url }}" class="read-more-btn">Read More
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8">
+										<path fill="#20add0" d="M246.3 6201.78a.31.31 0 0 1 0 .44l-3.26 3.3a.3.3 0 0 1-.44 0 .31.31 0 0 1 0-.45l2.73-2.76h-8.41a.31.31 0 0 1-.31-.31c0-.17.14-.31.3-.31h8.42l-2.73-2.76a.31.31 0 0 1 0-.44.3.3 0 0 1 .44 0z"/>
+									</svg>
+								</a>
+							</div>
+						</article>
+						<!--===================== End of Post ========================-->
+					</div>
+				{% endfor %}
+			</div>
+
+			<!-- Pagination -->
+			<div class="pagination">
+				{% if posts.has_previous %}
+					<a href="?page={{ posts.previous_page_number }}" class="page-item">Previous</a>
+				{% endif %}
+				
+				{% for page_num in posts.paginator.page_range %}
+					{% if page_num == posts.number %}
+						<span class="page-item active">{{ page_num }}</span>
+					{% else %}
+						<a href="?page={{ page_num }}" class="page-item">{{ page_num }}</a>
+					{% endif %}
+				{% endfor %}
+				
+				{% if posts.has_next %}
+					<a href="?page={{ posts.next_page_number }}" class="page-item">Next</a>
+				{% endif %}
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-lg-3 col-12 animated bounceInRight delay-250">
+			<aside>
+				<!--===================== Widget Category ========================-->
+				<!-- <div class="widget-category">
+					<h6 class="widget-title">Tags</h6>
+					<ul class="list-unstyled">
+						{% for tag in tags %}
+							<li><a href="{% url 'tagged_posts' tag.slug %}"><span>#</span>{{ tag.name }}</a></li>
+						{% endfor %}
+					</ul>
+				</div> -->
+				<!--===================== End of Widget Category ========================-->
+			</aside>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

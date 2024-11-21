@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div style="height: 100px;"></div> <!-- فضای اضافی -->
+<h1 style="display: none;">جان نثاری</h1>
+
+
+<div class="c-container" style="position: relative; background-image: url('{% static "assets/img/background.great.png" %}'); background-size: cover;direction: rtl; text-align: left;  ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="text-section" style="color: #080808 ">
+                    <br>
+                    <br>
+                    <br>
+					<br>
+                    <br>
+                    <br>
+					<br>
+                    <br>
+                    <br>
+                    <h3>We pave the way for your business with legal support; you move forward with confidence, and we protect your rights</h3>
+                </div>
+            </div>
+            <div class="col-lg-5 img_991">
+                <picture>
+					<img src="{% static 'assets/img/gayid.png' %}" 
+					style="width:100%; height: 100%; object-fit: cover;  max-width: 100%;direction: rtl; text-align: right; ">
+							   </picture>
+            </div>
+
+			<style>
+				@media (min-width: 992px) {
+					.img_991 img {
+						
+						margin-right: 90px !important;
+					}
+					.c-container{
+
+height: 100%;
+}
+				}
+			
+				@media (max-width: 991px) {
+					.img_991 img {
+						margin-left: 0; /* برای اطمینان از عدم جابه‌جایی در موبایل */
+					}
+					.c-container{
+
+						height: 1000px;
+					}
+				}
+			</style>
+			
+        </div>
+    </div>
+</div>
+
+    <!--===================== Live Currency ========================-->
+
+<div style="height: 150px;"></div>
+
+	
+	<!--===================== End of Slider ========================-->
+	<!--===================== Reasons Block ========================-->
+
+	<div class="container">
+		<div class="row reasons-block animatedParent">
+			<div class="col-xl-4 col-lg-4 col-12 animated bounceInLeft delay-250">
+				<h2 class="h2-main">At Jannesari Law Office, we cherish the values that lie at the core of every legal case:</h2>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-12">
+				<div class="row">
+					<div class="col-sm-12 col-md-6 animated bounceInRight delay-250">
+						<!--===================== Reason Block Cont ========================-->
+						<div class="reason-block-cont ">
+							<div class="reasons-icon-div reason-1">
+							</div>
+							<div class="reasons-desc-div">
+								<h4>Commitment to Transparency</h4>
+								<p>We believe that honest and clear communication with our clients is one of the keys to success. At every stage of the case, we strive to keep you informed about all details so that you can make informed decisions.</p>
+							</div>
+						</div>
+						<!--===================== End of Reason Block Cont ========================-->
+					</div>
+					<div class="col-sm-12 col-md-6 animated bounceInRight delay-500">
+						<!--===================== Reason Block Cont ========================-->
+						<div class="reason-block-cont">
+							<div class="reasons-icon-div reason-2">
+							</div>
+							
+							  
+							<div class="reasons-desc-div">
+								<h4>Speed and Accuracy in Services</h4>
+								<p>In today’s fast-paced world, timeliness is crucial. Our team is committed to handling your cases with both precision and speed, without sacrificing quality.</p>
+							</div>
+						</div>
+						<!--===================== End of Reason Block Cont ========================-->
+						
+					
+					</div>
+					<div class="col-sm-12 col-md-6 animated bounceInRight delay-250">
+					  		<!--===================== Reason Block Cont ========================-->
+						<div class="reason-block-cont">
+							<div class="reasons-icon-div reason-3">
+							</div>
+							<div class="reasons-desc-div">
+								<h4>Confidentiality and Trust</h4>
+								<p>Your trust in us is sacred. We are dedicated to managing all your information with the highest level of confidentiality and are always diligent in protecting your privacy.</p>
+							</div>
+						</div>
+						<!--===================== End of Reason Block Cont ========================-->
+					</div>
+					
+					<div class="col-sm-12 col-md-6 animated bounceInRight delay-500">
+						<!--===================== Reason Block Cont ========================-->
+						<div class="reason-block-cont">
+							<div class="reasons-icon-div reason-4">
+							</div>
+							<div class="reasons-desc-div">
+								<h4>Sustained Legal Support</h4>
+								<p>Our services go beyond simple legal consultation. We guarantee continuous support and legal assistance throughout all stages of your case, ensuring that you always have us by your side and can rely on us.</p>
+							</div>
+						</div>
+						<!--===================== End of Reason Block Cont ========================-->
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--===================== End of Reasons Block ========================-->
+
+	
+						<!--===================== End of Last News ========================-->
+
+{%endblock%}

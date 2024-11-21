@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+from django.utils.translation import gettext_lazy as _
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts",
     "blog",
+    "main",
     "rest_framework",
     "rest_framework_simplejwt",
     "rest_framework.authtoken",
@@ -52,6 +56,8 @@ INSTALLED_APPS = [
     "drf_yasg",
     "mail_templated",
     "django_celery_beat",
+    "taggit",
+
 ]
 
 MIDDLEWARE = [
@@ -59,6 +65,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -79,6 +86,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "core.context_processors.language_context",
             ],
         },
     },
@@ -122,9 +130,20 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
+LANGUAGES = [
+    ("en", _("English")),
+    ("fr", _("French")),
+    ("de", _("German")),
+]
+LOCALE_PATHS = [
+    os.path.join(
+        BASE_DIR, "locale"
+    ),  # مسیر به دایرکتوری که فایل‌های ترجمه در آن ذخیره می‌شوند
+]
 TIME_ZONE = "UTC"
 
 USE_I18N = True
+USE_L10N = True
 
 USE_TZ = True
 
@@ -140,6 +159,19 @@ MEDIA_ROOT = BASE_DIR / "media"
 STATICFILES_DIRS = [
     BASE_DIR / "staticfiles",
 ]
+
+
+# تنظیمات CKEditor
+# CKEDITOR_UPLOAD_PATH = "uploads/"
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'full',  # ابزارهای کامل
+#         'height': 300,
+#         'width': 'auto',
+#     },
+# }
+
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

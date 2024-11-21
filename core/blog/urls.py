@@ -1,5 +1,6 @@
 from django.urls import path, include
 from . import views
+from blog.views import *
 
 
 app_name = "blog"
@@ -13,7 +14,7 @@ urlpatterns = [
         views.Redirecttodjango.as_view(),
         name="go-to-django",
     ),
-    path("post/", views.PostList.as_view(), name="post-list"),
+    # path("post/", views.PostList.as_view(), name="post-list"),
     path("post/<int:pk>", views.PostDetailView.as_view(), name="post-detail"),
     path("post/create/", views.PostCreateView.as_view(), name="post-create"),
     path(
@@ -27,4 +28,10 @@ urlpatterns = [
         name="post-delete",
     ),
     path("api/v1/", include("blog.api.v1.urls")),
+    path("en/blog-posting/", blog_posting, name="blog-posting"),
+    path("fa/blog-posting/", fa_blog_posting, name="fa_blog_posting"),
+    path("en/blog-soon/", blog_soon, name="blog-soon"),
+    path("fa/blog-soon/", fa_blog_soon, name="fa_blog-soon"),
+    path("", views.PostList.as_view(), name="post-list"),
+    path("tag/<str:name>/", views.tagged_posts, name="tag"),
 ]
